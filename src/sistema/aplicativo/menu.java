@@ -20,10 +20,9 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         areaBTN = new javax.swing.JButton();
-        energiaBTN = new javax.swing.JButton();
         fuerzaBTN = new javax.swing.JButton();
+        energiaBTN = new javax.swing.JButton();
         longitudBTN = new javax.swing.JButton();
         masaBTN = new javax.swing.JButton();
         presionBTN = new javax.swing.JButton();
@@ -31,16 +30,18 @@ public class menu extends javax.swing.JFrame {
         tiempoBTN = new javax.swing.JButton();
         velocidadBTN = new javax.swing.JButton();
         volumenBTN = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImages(getIconImages());
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(52, 152, 219));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
-        jLabel1.setText("ESCOJA LAS UNIDADES QUE DESEA CONVERTIR");
-
-        areaBTN.setBackground(new java.awt.Color(255, 255, 255));
+        areaBTN.setBackground(new java.awt.Color(153, 153, 153));
+        areaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         areaBTN.setText("AREA");
         areaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         areaBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -48,17 +49,10 @@ public class menu extends javax.swing.JFrame {
                 areaBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(areaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 160, 45));
 
-        energiaBTN.setBackground(new java.awt.Color(255, 255, 255));
-        energiaBTN.setText("ENERGIA");
-        energiaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        energiaBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                energiaBTNActionPerformed(evt);
-            }
-        });
-
-        fuerzaBTN.setBackground(new java.awt.Color(255, 255, 255));
+        fuerzaBTN.setBackground(new java.awt.Color(153, 153, 153));
+        fuerzaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         fuerzaBTN.setText("FUERZA");
         fuerzaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fuerzaBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -66,8 +60,21 @@ public class menu extends javax.swing.JFrame {
                 fuerzaBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(fuerzaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 160, 45));
 
-        longitudBTN.setBackground(new java.awt.Color(255, 255, 255));
+        energiaBTN.setBackground(new java.awt.Color(153, 153, 153));
+        energiaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        energiaBTN.setText("ENERGIA");
+        energiaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        energiaBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                energiaBTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(energiaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 160, 45));
+
+        longitudBTN.setBackground(new java.awt.Color(153, 153, 153));
+        longitudBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         longitudBTN.setText("LONGITUD");
         longitudBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         longitudBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -75,8 +82,10 @@ public class menu extends javax.swing.JFrame {
                 longitudBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, 45));
 
-        masaBTN.setBackground(new java.awt.Color(255, 255, 255));
+        masaBTN.setBackground(new java.awt.Color(153, 153, 153));
+        masaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         masaBTN.setText("MASA");
         masaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         masaBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -84,8 +93,10 @@ public class menu extends javax.swing.JFrame {
                 masaBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 160, 45));
 
         presionBTN.setBackground(new java.awt.Color(255, 255, 255));
+        presionBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         presionBTN.setText("PRESION");
         presionBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         presionBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -93,8 +104,10 @@ public class menu extends javax.swing.JFrame {
                 presionBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(presionBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 160, 45));
 
         tempeBTN.setBackground(new java.awt.Color(255, 255, 255));
+        tempeBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         tempeBTN.setText("TEMPERATURA");
         tempeBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tempeBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -102,8 +115,10 @@ public class menu extends javax.swing.JFrame {
                 tempeBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(tempeBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 160, 45));
 
         tiempoBTN.setBackground(new java.awt.Color(255, 255, 255));
+        tiempoBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         tiempoBTN.setText("TIEMPO");
         tiempoBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tiempoBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -111,8 +126,10 @@ public class menu extends javax.swing.JFrame {
                 tiempoBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(tiempoBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 160, 45));
 
         velocidadBTN.setBackground(new java.awt.Color(255, 255, 255));
+        velocidadBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         velocidadBTN.setText("VELOCIDAD");
         velocidadBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         velocidadBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -120,8 +137,10 @@ public class menu extends javax.swing.JFrame {
                 velocidadBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(velocidadBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 160, 45));
 
         volumenBTN.setBackground(new java.awt.Color(255, 255, 255));
+        volumenBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         volumenBTN.setText("VOLUMEN");
         volumenBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         volumenBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -129,72 +148,22 @@ public class menu extends javax.swing.JFrame {
                 volumenBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(volumenBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 160, 45));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(longitudBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(masaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(122, 122, 122)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(velocidadBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(volumenBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(areaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(energiaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(fuerzaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(122, 122, 122)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(presionBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(tempeBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(tiempoBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(areaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(presionBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(energiaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(tempeBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tiempoBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(fuerzaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(longitudBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(velocidadBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(volumenBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(masaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FON2.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,6 +264,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton energiaBTN;
     private javax.swing.JButton fuerzaBTN;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton longitudBTN;
     private javax.swing.JButton masaBTN;

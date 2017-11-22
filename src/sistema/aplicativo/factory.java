@@ -1,5 +1,5 @@
 package sistema.aplicativo;
 
-public class factory{
+public class factory extends conversiones{
     
 }
