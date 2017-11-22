@@ -35,35 +35,100 @@ public class menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(52, 152, 219));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel1.setText("ESCOJA LAS UNIDADES QUE DESEA CONVERTIR");
 
+        areaBTN.setBackground(new java.awt.Color(255, 255, 255));
         areaBTN.setText("AREA");
+        areaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         areaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 areaBTNActionPerformed(evt);
             }
         });
 
+        energiaBTN.setBackground(new java.awt.Color(255, 255, 255));
         energiaBTN.setText("ENERGIA");
+        energiaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        energiaBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                energiaBTNActionPerformed(evt);
+            }
+        });
 
+        fuerzaBTN.setBackground(new java.awt.Color(255, 255, 255));
         fuerzaBTN.setText("FUERZA");
+        fuerzaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fuerzaBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fuerzaBTNActionPerformed(evt);
+            }
+        });
 
+        longitudBTN.setBackground(new java.awt.Color(255, 255, 255));
         longitudBTN.setText("LONGITUD");
+        longitudBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        longitudBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                longitudBTNActionPerformed(evt);
+            }
+        });
 
+        masaBTN.setBackground(new java.awt.Color(255, 255, 255));
         masaBTN.setText("MASA");
+        masaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        masaBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                masaBTNActionPerformed(evt);
+            }
+        });
 
+        presionBTN.setBackground(new java.awt.Color(255, 255, 255));
         presionBTN.setText("PRESION");
+        presionBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        presionBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                presionBTNActionPerformed(evt);
+            }
+        });
 
+        tempeBTN.setBackground(new java.awt.Color(255, 255, 255));
         tempeBTN.setText("TEMPERATURA");
+        tempeBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tempeBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tempeBTNActionPerformed(evt);
+            }
+        });
 
+        tiempoBTN.setBackground(new java.awt.Color(255, 255, 255));
         tiempoBTN.setText("TIEMPO");
+        tiempoBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tiempoBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tiempoBTNActionPerformed(evt);
+            }
+        });
 
+        velocidadBTN.setBackground(new java.awt.Color(255, 255, 255));
         velocidadBTN.setText("VELOCIDAD");
+        velocidadBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        velocidadBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velocidadBTNActionPerformed(evt);
+            }
+        });
 
+        volumenBTN.setBackground(new java.awt.Color(255, 255, 255));
         volumenBTN.setText("VOLUMEN");
+        volumenBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        volumenBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volumenBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -72,71 +137,64 @@ public class menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(109, 109, 109)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(masaBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(longitudBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(122, 122, 122)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(velocidadBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                                    .addComponent(longitudBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                    .addComponent(masaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(122, 122, 122)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(velocidadBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(volumenBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(areaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(energiaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE))
-                                    .addComponent(fuerzaBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(areaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(energiaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                    .addComponent(fuerzaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(122, 122, 122)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(presionBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(tempeBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                                    .addComponent(tiempoBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel1)))
-                .addContainerGap(52, Short.MAX_VALUE))
+                                    .addComponent(tempeBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                    .addComponent(tiempoBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(presionBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(areaBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tempeBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                    .addComponent(energiaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(areaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(presionBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tiempoBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                    .addComponent(energiaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(tempeBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tiempoBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addComponent(fuerzaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(velocidadBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                    .addComponent(longitudBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(11, 11, 11)
+                    .addComponent(longitudBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(velocidadBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(masaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                    .addComponent(volumenBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                    .addComponent(volumenBTN, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(masaBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,6 +208,51 @@ public class menu extends javax.swing.JFrame {
         area a = new area();
         a.setVisible(true);
     }//GEN-LAST:event_areaBTNActionPerformed
+
+    private void presionBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_presionBTNActionPerformed
+        presion p = new presion();
+        p.setVisible(true);
+    }//GEN-LAST:event_presionBTNActionPerformed
+
+    private void energiaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_energiaBTNActionPerformed
+        energia e = new energia();
+        e.setVisible(true);
+    }//GEN-LAST:event_energiaBTNActionPerformed
+
+    private void tempeBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempeBTNActionPerformed
+        temperatura t =new temperatura();
+        t.setVisible(true);
+    }//GEN-LAST:event_tempeBTNActionPerformed
+
+    private void fuerzaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fuerzaBTNActionPerformed
+        fuerza f = new fuerza();
+        f.setVisible(true);
+    }//GEN-LAST:event_fuerzaBTNActionPerformed
+
+    private void tiempoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tiempoBTNActionPerformed
+        tiempo ti = new tiempo();
+        ti.setVisible(true);
+    }//GEN-LAST:event_tiempoBTNActionPerformed
+
+    private void longitudBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_longitudBTNActionPerformed
+        longitud l = new longitud();
+        l.setVisible(true);
+    }//GEN-LAST:event_longitudBTNActionPerformed
+
+    private void velocidadBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velocidadBTNActionPerformed
+        velocidad v = new velocidad();
+        v.setVisible(true);
+    }//GEN-LAST:event_velocidadBTNActionPerformed
+
+    private void masaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masaBTNActionPerformed
+        masa m = new masa();
+        m.setVisible(true);
+    }//GEN-LAST:event_masaBTNActionPerformed
+
+    private void volumenBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volumenBTNActionPerformed
+        volumen vo = new volumen();
+        vo.setVisible(true);
+    }//GEN-LAST:event_volumenBTNActionPerformed
 
     /**
      * @param args the command line arguments
