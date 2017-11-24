@@ -16,6 +16,7 @@ public class presion extends javax.swing.JFrame {
      */
     public presion() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

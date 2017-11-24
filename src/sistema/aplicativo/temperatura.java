@@ -16,6 +16,7 @@ public class temperatura extends javax.swing.JFrame {
      */
     public temperatura() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

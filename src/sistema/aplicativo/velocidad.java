@@ -16,6 +16,7 @@ public class velocidad extends javax.swing.JFrame {
      */
     public velocidad() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -16,6 +16,7 @@ public class volumen extends javax.swing.JFrame {
      */
     public volumen() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

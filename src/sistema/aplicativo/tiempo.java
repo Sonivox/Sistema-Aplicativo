@@ -16,6 +16,7 @@ public class tiempo extends javax.swing.JFrame {
      */
     public tiempo() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

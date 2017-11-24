@@ -16,6 +16,7 @@ public class energia extends javax.swing.JFrame {
      */
     public energia() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

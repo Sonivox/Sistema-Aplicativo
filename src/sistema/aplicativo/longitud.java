@@ -16,6 +16,7 @@ public class longitud extends javax.swing.JFrame {
      */
     public longitud() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

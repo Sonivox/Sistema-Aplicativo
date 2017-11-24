@@ -16,6 +16,7 @@ public class fuerza extends javax.swing.JFrame {
      */
     public fuerza() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

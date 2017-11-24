@@ -16,6 +16,7 @@ public class masa extends javax.swing.JFrame {
      */
     public masa() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
