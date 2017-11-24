@@ -152,7 +152,7 @@ public class area extends javax.swing.JFrame {
         
         c.centiHecta(parseDouble(unidad));
         
-        c.centiMeto(parseDouble(unidad));
+        c.centiMetro(parseDouble(unidad));
         
         c.centiKilo(parseDouble(unidad));
         

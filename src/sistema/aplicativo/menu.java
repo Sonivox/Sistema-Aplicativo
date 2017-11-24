@@ -1,13 +1,14 @@
 package sistema.aplicativo;
-
 /**
  *
  * @author Roberto
  */
 public class menu extends javax.swing.JFrame {
     public menu() {
+        
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -31,73 +32,88 @@ public class menu extends javax.swing.JFrame {
         velocidadBTN = new javax.swing.JButton();
         volumenBTN = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        cerrarLB = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         setIconImages(getIconImages());
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(52, 152, 219));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        areaBTN.setBackground(new java.awt.Color(153, 153, 153));
-        areaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        areaBTN.setBackground(new java.awt.Color(27, 90, 119));
+        areaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        areaBTN.setForeground(new java.awt.Color(255, 255, 255));
         areaBTN.setText("AREA");
+        areaBTN.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         areaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         areaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 areaBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(areaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 160, 45));
+        jPanel1.add(areaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 160, 45));
 
-        fuerzaBTN.setBackground(new java.awt.Color(153, 153, 153));
-        fuerzaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        fuerzaBTN.setBackground(new java.awt.Color(27, 90, 119));
+        fuerzaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        fuerzaBTN.setForeground(new java.awt.Color(255, 255, 255));
         fuerzaBTN.setText("FUERZA");
+        fuerzaBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         fuerzaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fuerzaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fuerzaBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(fuerzaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 160, 45));
+        jPanel1.add(fuerzaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 160, 45));
 
-        energiaBTN.setBackground(new java.awt.Color(153, 153, 153));
-        energiaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        energiaBTN.setBackground(new java.awt.Color(27, 90, 119));
+        energiaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        energiaBTN.setForeground(new java.awt.Color(255, 255, 255));
         energiaBTN.setText("ENERGIA");
+        energiaBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         energiaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         energiaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 energiaBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(energiaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 160, 45));
+        jPanel1.add(energiaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 160, 45));
 
-        longitudBTN.setBackground(new java.awt.Color(153, 153, 153));
-        longitudBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        longitudBTN.setBackground(new java.awt.Color(27, 90, 119));
+        longitudBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        longitudBTN.setForeground(new java.awt.Color(255, 255, 255));
         longitudBTN.setText("LONGITUD");
+        longitudBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         longitudBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         longitudBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 longitudBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, 45));
+        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 160, 45));
 
-        masaBTN.setBackground(new java.awt.Color(153, 153, 153));
-        masaBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        masaBTN.setBackground(new java.awt.Color(27, 90, 119));
+        masaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        masaBTN.setForeground(new java.awt.Color(255, 255, 255));
         masaBTN.setText("MASA");
+        masaBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         masaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         masaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 masaBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 160, 45));
+        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 160, 45));
 
-        presionBTN.setBackground(new java.awt.Color(255, 255, 255));
-        presionBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        presionBTN.setBackground(new java.awt.Color(27, 90, 119));
+        presionBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        presionBTN.setForeground(new java.awt.Color(255, 255, 255));
         presionBTN.setText("PRESION");
+        presionBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         presionBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         presionBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,9 +122,11 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(presionBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 160, 45));
 
-        tempeBTN.setBackground(new java.awt.Color(255, 255, 255));
-        tempeBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        tempeBTN.setBackground(new java.awt.Color(27, 90, 119));
+        tempeBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        tempeBTN.setForeground(new java.awt.Color(255, 255, 255));
         tempeBTN.setText("TEMPERATURA");
+        tempeBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         tempeBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tempeBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,9 +135,11 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(tempeBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 160, 45));
 
-        tiempoBTN.setBackground(new java.awt.Color(255, 255, 255));
-        tiempoBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        tiempoBTN.setBackground(new java.awt.Color(27, 90, 119));
+        tiempoBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        tiempoBTN.setForeground(new java.awt.Color(255, 255, 255));
         tiempoBTN.setText("TIEMPO");
+        tiempoBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         tiempoBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tiempoBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,9 +148,11 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(tiempoBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 160, 45));
 
-        velocidadBTN.setBackground(new java.awt.Color(255, 255, 255));
-        velocidadBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        velocidadBTN.setBackground(new java.awt.Color(27, 90, 119));
+        velocidadBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        velocidadBTN.setForeground(new java.awt.Color(255, 255, 255));
         velocidadBTN.setText("VELOCIDAD");
+        velocidadBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         velocidadBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         velocidadBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,9 +161,11 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(velocidadBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 160, 45));
 
-        volumenBTN.setBackground(new java.awt.Color(255, 255, 255));
-        volumenBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
+        volumenBTN.setBackground(new java.awt.Color(27, 90, 119));
+        volumenBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        volumenBTN.setForeground(new java.awt.Color(255, 255, 255));
         volumenBTN.setText("VOLUMEN");
+        volumenBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         volumenBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         volumenBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,18 +176,32 @@ public class menu extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+        jLabel2.setText("SELECIONE LAS UNIDADES ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("QUE DESEA CONVERTIR");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
+
+        cerrarLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar X.png"))); // NOI18N
+        cerrarLB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cerrarLB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cerrarLBMouseClicked(evt);
+            }
+        });
+        jPanel1.add(cerrarLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 0, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FON2.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo3.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,6 +261,10 @@ public class menu extends javax.swing.JFrame {
         vo.setVisible(true);
     }//GEN-LAST:event_volumenBTNActionPerformed
 
+    private void cerrarLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarLBMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_cerrarLBMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -250,8 +292,7 @@ public class menu extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new menu().setVisible(true);
@@ -261,10 +302,12 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton areaBTN;
+    private javax.swing.JLabel cerrarLB;
     private javax.swing.JButton energiaBTN;
     private javax.swing.JButton fuerzaBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton longitudBTN;
     private javax.swing.JButton masaBTN;
@@ -274,4 +317,6 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton velocidadBTN;
     private javax.swing.JButton volumenBTN;
     // End of variables declaration//GEN-END:variables
+
+
 }

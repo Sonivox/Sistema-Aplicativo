@@ -11,7 +11,7 @@ public class conversiones {
         resultado = String.valueOf(conversion);
         System.out.println(resultado);
     }
-    public void centiMeto(double area){
+    public void centiMetro(double area){
         u.setArea(area);
         conversion = (u.getArea() /10000);
         resultado = String.valueOf(conversion);
@@ -38,4 +38,14 @@ public class conversiones {
         resultado = String.valueOf(conversion);
         System.out.println(resultado);
     }
+    
+    public void centiPie(double area){
+        
+    }
+    
+    public void centiYar(double area){
+        
+    }
+    
+    
 }
