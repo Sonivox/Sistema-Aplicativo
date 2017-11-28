@@ -12,7 +12,8 @@ import static java.lang.Double.parseDouble;
  * @author Roberto
  */
 public class area extends javax.swing.JFrame {
-    conversiones c = new conversiones();
+    
+    factory f = new factory();
     
     public area() {
         initComponents();
@@ -35,103 +36,67 @@ public class area extends javax.swing.JFrame {
         iniciarBTN = new javax.swing.JButton();
         segundaCB = new javax.swing.JComboBox<>();
         primeraCB = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         regresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(52, 152, 219));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        unidadTXT.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        unidadTXT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                unidadTXTKeyTyped(evt);
+            }
+        });
+        jPanel1.add(unidadTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 105, 208, 40));
 
         resultadoTXT.setEditable(false);
+        resultadoTXT.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel1.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 105, 222, 40));
 
-        jLabel2.setText("RESULTADO");
+        jLabel2.setFont(new java.awt.Font("Cambria Math", 0, 36)); // NOI18N
+        jLabel2.setText("=");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(259, 110, -1, -1));
 
         iniciarBTN.setBackground(new java.awt.Color(255, 255, 255));
-        iniciarBTN.setText("Convertir");
+        iniciarBTN.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        iniciarBTN.setText("CONVERTIR");
+        iniciarBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         iniciarBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iniciarBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iniciarBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 150, 69));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS CUADRADOS", "METROS CUADRADOS", "KILOMETROS CUADRADOS", "MILLAS CUADRADAS", "HECTAREAS", "PIES CUADRADOS", "PULGADAS CUADRADAS", "YARDAS CUADRADAS" }));
+        segundaCB.setToolTipText("");
+        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 160, -1, 57));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
-
-        jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
-        jLabel3.setText("A:");
+        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS CUADRADOS", "METROS CUADRADOS", "KILOMETROS CUADRADOS", "MILLAS CUADRADAS", "HECTAREAS", "PIES CUADRADOS", "PULGADAS CUADRADAS", "YARDAS CUADRADAS" }));
+        jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 160, 208, 48));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         jLabel1.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 65, -1, -1));
 
         regresar.setBackground(new java.awt.Color(255, 255, 255));
-        regresar.setText("Regresar");
+        regresar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        regresar.setText("MENU");
+        regresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresarActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iniciarBTN)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(primeraCB, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(unidadTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2)))
-                        .addGap(5, 5, 5)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(segundaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(311, 311, 311)
-                        .addComponent(resultadoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addComponent(regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primeraCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(segundaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addComponent(iniciarBTN)
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(unidadTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(resultadoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(regresar)
-                .addContainerGap())
-        );
+        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 0, 101, 47));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,30 +106,276 @@ public class area extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
-        String unidad = unidadTXT.getText().toString();
+        //PARA LAS OPCIONES
+        String opcion = primeraCB.getSelectedItem().toString();
+        String opcion2 = segundaCB.getSelectedItem().toString();
         
-        c.centiHecta(parseDouble(unidad));
+        //PARA LOS CALCULOS
+        double unidad = parseDouble(unidadTXT.getText());
+        double resultado = 0;
         
-        c.centiMetro(parseDouble(unidad));
+        if(opcion == null ? opcion2 == null : opcion.equals(opcion2)){
+            resultadoTXT.setText(unidadTXT.getText());
+        }
         
-        c.centiKilo(parseDouble(unidad));
+        //PARA CENTIMETROS
+        if("CENTIMETROS CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.centiMetro(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("CENTIMETROS CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.centiKilo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("CENTIMETROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
+            resultado = parseDouble(f.centiHecta(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("CENTIMETROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.centiMilla(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("CENTIMETROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.centiPie(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("CENTIMETROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.centiPul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("CENTIMETROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.centiYar(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
         
-        c.centiMili(parseDouble(unidad));
+        //PARA METROS
+        if("METROS CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.metroCen(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.metroKilo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.metroMilla(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
+            resultado = parseDouble(f.metroHecta(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.metroPie(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.metroPul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.metroYar(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
         
+        //PARA LOS KILOMETROS
+        if("KILOMETROS CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.kiloCenti(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.kiloMetro(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.kiloMilla(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
+            resultado = parseDouble(f.kiloHecta(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.kiloPie(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.kiloPul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.kiloYar(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LAS MILLAS
+        if("MILLAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.millaCen(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.millaMet(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.millaKilo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
+            resultado = parseDouble(f.millaHecta(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.millaPie(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS CUADRADAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.millaPul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS CUADRADAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.millaYar(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LAS HECTAREAS
+        if("HECTAREAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.hectaCen(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HECTAREAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.hectaMet(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HECTAREAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.hectaKilo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HECTAREAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.hectaMilla(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HECTAREAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.hectaPie(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HECTAREAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.hectaPul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HECTAREAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.hectaYar(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LOS PIES 
+        if("PIES CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.pieCen(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.pieMet(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.pieKilo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.pieMilla(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
+            resultado = parseDouble(f.pieHecta(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.piePul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.piePul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LAS PULGADAS
+        if("PULGADAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.pulCen(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PULGADAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.pulMet(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PULGADAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.pulKilo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PULGADAS CUADRADAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.pulMilla(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PULGADAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
+            resultado = parseDouble(f.pulHecta(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PULGADAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.pulPie(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PULGADAS CUADRADAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.pulYar(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LAS YARDAS
+        if("YARDAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.yarCen(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("YARDAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.yarMet(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("YARDAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.yarKilo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("YARDAS CUADRADAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.yarMilla(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("YARDAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
+            resultado = parseDouble(f.yarHecta(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("YARDAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
+            resultado = parseDouble(f.yarPie(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("YARDAS CUADRADAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(f.yarPul(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
         
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
     private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
-        
         this.dispose();
     }//GEN-LAST:event_regresarActionPerformed
+
+    private void unidadTXTKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_unidadTXTKeyTyped
+        
+    }//GEN-LAST:event_unidadTXTKeyTyped
 
     /**
      * @param args the command line arguments
@@ -208,7 +419,6 @@ public class area extends javax.swing.JFrame {
     private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> primeraCB;
     private javax.swing.JButton regresar;

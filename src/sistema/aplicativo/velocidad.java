@@ -1,16 +1,18 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package sistema.aplicativo;
 
+import static java.lang.Double.parseDouble;
+
 /**
  *
  * @author Ronald
  */
 public class velocidad extends javax.swing.JFrame {
-
+    factory f = new factory();
     /**
      * Creates new form velocidad
      */
@@ -29,10 +31,10 @@ public class velocidad extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        unidadTXT2 = new javax.swing.JTextField();
-        resultadoTXT2 = new javax.swing.JTextField();
+        unidadTXT = new javax.swing.JTextField();
+        resultadoTXT = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        iniciarBTN2 = new javax.swing.JButton();
+        iniciarBTN = new javax.swing.JButton();
         segundaCB = new javax.swing.JComboBox<>();
         primeraCB = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
@@ -43,21 +45,23 @@ public class velocidad extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(52, 152, 219));
 
-        resultadoTXT2.setEditable(false);
+        resultadoTXT.setEditable(false);
 
         jLabel4.setText("RESULTADO");
 
-        iniciarBTN2.setText("Convertir");
-        iniciarBTN2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        iniciarBTN2.addActionListener(new java.awt.event.ActionListener() {
+        iniciarBTN.setText("Convertir");
+        iniciarBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        iniciarBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iniciarBTN2ActionPerformed(evt);
+                iniciarBTNActionPerformed(evt);
             }
         });
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "KILOMETROS HORA", "METROS SEGUNDO", "MILLAS HORA", "NUDOS", "PIES SEGUNDO" }));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
+        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "KILOMETROS HORA", "METROS SEGUNDO", "MILLAS HORA", "NUDOS", "PIES SEGUNDO" }));
 
         jLabel5.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel5.setText("A:");
@@ -81,11 +85,11 @@ public class velocidad extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iniciarBTN2)
+                    .addComponent(iniciarBTN)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(primeraCB, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(unidadTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(unidadTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(37, 37, 37)
@@ -100,7 +104,7 @@ public class velocidad extends javax.swing.JFrame {
                         .addGap(40, 40, 40))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(resultadoTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(resultadoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,12 +127,12 @@ public class velocidad extends javax.swing.JFrame {
                     .addComponent(segundaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
-                .addComponent(iniciarBTN2)
+                .addComponent(iniciarBTN)
                 .addGap(17, 17, 17)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(unidadTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(unidadTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(resultadoTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(resultadoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(regresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(23, Short.MAX_VALUE))
@@ -148,9 +152,19 @@ public class velocidad extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void iniciarBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTN2ActionPerformed
-
-    }//GEN-LAST:event_iniciarBTN2ActionPerformed
+    private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
+        //PARA LAS OPCIONES
+        String opcion = primeraCB.getSelectedItem().toString();
+        String opcion2 = segundaCB.getSelectedItem().toString();
+        
+        //PARA LOS CALCULOS
+        double unidad = parseDouble(unidadTXT.getText());
+        double resultado = 0;
+        
+        if(opcion == null ? opcion2 == null : opcion.equals(opcion2)){
+            resultadoTXT.setText(unidadTXT.getText());
+        }
+    }//GEN-LAST:event_iniciarBTNActionPerformed
 
     private void regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar1ActionPerformed
       
@@ -193,15 +207,15 @@ public class velocidad extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton iniciarBTN2;
+    private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JComboBox<String> primeraCB;
     private javax.swing.JButton regresar1;
-    private javax.swing.JTextField resultadoTXT2;
+    private javax.swing.JTextField resultadoTXT;
     private javax.swing.JComboBox<String> segundaCB;
-    private javax.swing.JTextField unidadTXT2;
+    private javax.swing.JTextField unidadTXT;
     // End of variables declaration//GEN-END:variables
 }

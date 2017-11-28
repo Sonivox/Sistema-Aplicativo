@@ -22,7 +22,6 @@ public class menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         areaBTN = new javax.swing.JButton();
-        fuerzaBTN = new javax.swing.JButton();
         energiaBTN = new javax.swing.JButton();
         longitudBTN = new javax.swing.JButton();
         masaBTN = new javax.swing.JButton();
@@ -57,6 +56,8 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(areaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 160, 40));
 
+<<<<<<< HEAD
+=======
         fuerzaBTN.setBackground(new java.awt.Color(27, 90, 119));
         fuerzaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         fuerzaBTN.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,6 +71,7 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(fuerzaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 160, 45));
 
+>>>>>>> 881fa75e94d901cc7d635d57d3f093e31bba0d4e
         energiaBTN.setBackground(new java.awt.Color(27, 90, 119));
         energiaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         energiaBTN.setForeground(new java.awt.Color(255, 255, 255));
@@ -94,7 +96,11 @@ public class menu extends javax.swing.JFrame {
                 longitudBTNActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 160, 45));
+=======
         jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 160, 45));
+>>>>>>> 881fa75e94d901cc7d635d57d3f093e31bba0d4e
 
         masaBTN.setBackground(new java.awt.Color(27, 90, 119));
         masaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -107,7 +113,11 @@ public class menu extends javax.swing.JFrame {
                 masaBTNActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 160, 45));
+=======
         jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 160, 45));
+>>>>>>> 881fa75e94d901cc7d635d57d3f093e31bba0d4e
 
         presionBTN.setBackground(new java.awt.Color(27, 90, 119));
         presionBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -233,11 +243,6 @@ public class menu extends javax.swing.JFrame {
         t.setVisible(true);
     }//GEN-LAST:event_tempeBTNActionPerformed
 
-    private void fuerzaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fuerzaBTNActionPerformed
-        fuerza f = new fuerza();
-        f.setVisible(true);
-    }//GEN-LAST:event_fuerzaBTNActionPerformed
-
     private void tiempoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tiempoBTNActionPerformed
         tiempo ti = new tiempo();
         ti.setVisible(true);
@@ -306,7 +311,6 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton areaBTN;
     private javax.swing.JLabel cerrarLB;
     private javax.swing.JButton energiaBTN;
-    private javax.swing.JButton fuerzaBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

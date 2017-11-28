@@ -5,12 +5,15 @@
  */
 package sistema.aplicativo;
 
+import static java.lang.Double.parseDouble;
+
 /**
  *
  * @author Ronald
  */
 public class presion extends javax.swing.JFrame {
-
+    
+    factory f = new factory();
     /**
      * Creates new form presion
      */
@@ -42,10 +45,14 @@ public class presion extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(52, 152, 219));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(unidadTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 158, 99, 32));
 
         resultadoTXT.setEditable(false);
+        jPanel1.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 158, 92, 32));
 
         jLabel2.setText("RESULTADO");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 167, -1, -1));
 
         iniciarBTN.setText("Convertir");
         iniciarBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -54,16 +61,23 @@ public class presion extends javax.swing.JFrame {
                 iniciarBTNActionPerformed(evt);
             }
         });
+        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 118, -1, -1));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ATMOSFERAS", "BAROS", "mmHG", "PASCALES" }));
+        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 63, 197, 37));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
+        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ATMOSFERAS", "BAROS", "mmHG", "PASCALES" }));
+        jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 63, 189, 37));
 
         jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel3.setText("A:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 64, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         jLabel1.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 21, -1, -1));
 
         regresar1.setBackground(new java.awt.Color(255, 255, 255));
         regresar1.setText("Regresar");
@@ -73,66 +87,7 @@ public class presion extends javax.swing.JFrame {
                 regresar1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iniciarBTN)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(primeraCB, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(unidadTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(23, 23, 23)
-                                .addComponent(jLabel2)))))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(segundaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(resultadoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(207, 207, 207)
-                        .addComponent(regresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primeraCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(segundaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addComponent(iniciarBTN)
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(unidadTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(resultadoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(regresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 201, 101, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,7 +104,59 @@ public class presion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
-
+        //PARA LAS OPCIONES
+        String opcion = primeraCB.getSelectedItem().toString();
+        String opcion2 = segundaCB.getSelectedItem().toString();
+        
+        //PARA LOS CALCULOS
+        double unidad = parseDouble(unidadTXT.getText());
+        double resultado = 0;
+        
+        if(opcion == null ? opcion2 == null : opcion.equals(opcion2)){
+            resultadoTXT.setText(unidadTXT.getText());
+        }
+        
+        //PARA LAS ATMOSFERA 
+        if("ATMOSFERAS".equals(opcion) && "mmHG".equals(opcion2)){
+            resultado = parseDouble(f.AtmosferammHG(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("ATMOSFERAS".equals(opcion) && "PASCALES".equals(opcion2)){
+            resultado = parseDouble(f.AtmosferaPascales(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("ATMOSFERAS".equals(opcion) && "BAROS".equals(opcion2)){
+            resultado = parseDouble(f.AtmosferaBaros(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LOS BAROS
+        if("BAROS".equals(opcion) && "ATMOSFERAS".equals(opcion2)){
+            resultado = parseDouble(f.BarosAtmosfera(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("BAROS".equals(opcion) && "mmHG".equals(opcion2)){
+            resultado = parseDouble(f.BarosmmHG(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("BAROS".equals(opcion) && "PASCALES".equals(opcion2)){
+            resultado = parseDouble(f.BarosPascales(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LOS PASCALES
+        if("PASCALES".equals(opcion) && "BAROS".equals(opcion2)){
+            resultado = parseDouble(f.PascalesBaros(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PASCALES".equals(opcion) && "ATMOSFERAS".equals(opcion2)){
+            resultado = parseDouble(f.PascalesAtmosfera(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PASCALES".equals(opcion) && "mmHG".equals(opcion2)){
+            resultado = parseDouble(f.PascalesmmHG(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
     private void regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar1ActionPerformed
