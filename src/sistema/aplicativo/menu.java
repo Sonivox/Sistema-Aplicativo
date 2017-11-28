@@ -198,47 +198,47 @@ public class menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void areaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaBTNActionPerformed
-        area a = new area();
+        area a = principal.f.are();
         a.setVisible(true);
     }//GEN-LAST:event_areaBTNActionPerformed
 
     private void presionBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_presionBTNActionPerformed
-        presion p = new presion();
+        presion p = principal.f.presion();
         p.setVisible(true);
     }//GEN-LAST:event_presionBTNActionPerformed
 
     private void energiaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_energiaBTNActionPerformed
-        energia e = new energia();
+        energia e = principal.f.energia();
         e.setVisible(true);
     }//GEN-LAST:event_energiaBTNActionPerformed
 
     private void tempeBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempeBTNActionPerformed
-        temperatura t =new temperatura();
+        temperatura t = principal.f.temperatura();
         t.setVisible(true);
     }//GEN-LAST:event_tempeBTNActionPerformed
 
     private void tiempoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tiempoBTNActionPerformed
-        tiempo ti = new tiempo();
+        tiempo ti = principal.f.tiempo();
         ti.setVisible(true);
     }//GEN-LAST:event_tiempoBTNActionPerformed
 
     private void longitudBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_longitudBTNActionPerformed
-        longitud l = new longitud();
+        longitud l = principal.f.longitud();
         l.setVisible(true);
     }//GEN-LAST:event_longitudBTNActionPerformed
 
     private void velocidadBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velocidadBTNActionPerformed
-        velocidad v = new velocidad();
+        velocidad v = principal.f.velocidad();
         v.setVisible(true);
     }//GEN-LAST:event_velocidadBTNActionPerformed
 
     private void masaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masaBTNActionPerformed
-        masa m = new masa();
+        masa m = principal.f.masa();
         m.setVisible(true);
     }//GEN-LAST:event_masaBTNActionPerformed
 
     private void volumenBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volumenBTNActionPerformed
-        volumen vo = new volumen();
+        volumen vo = principal.f.volumen();
         vo.setVisible(true);
     }//GEN-LAST:event_volumenBTNActionPerformed
 

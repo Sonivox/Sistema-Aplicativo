@@ -12,8 +12,6 @@ import static java.lang.Double.parseDouble;
  * @author Ronald
  */
 public class presion extends javax.swing.JFrame {
-    
-    factory f = new factory();
     /**
      * Creates new form presion
      */
@@ -118,43 +116,43 @@ public class presion extends javax.swing.JFrame {
         
         //PARA LAS ATMOSFERA 
         if("ATMOSFERAS".equals(opcion) && "mmHG".equals(opcion2)){
-            resultado = parseDouble(f.AtmosferammHG(unidad));
+            resultado = parseDouble(principal.f.AtmosferammHG(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("ATMOSFERAS".equals(opcion) && "PASCALES".equals(opcion2)){
-            resultado = parseDouble(f.AtmosferaPascales(unidad));
+            resultado = parseDouble(principal.f.AtmosferaPascales(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("ATMOSFERAS".equals(opcion) && "BAROS".equals(opcion2)){
-            resultado = parseDouble(f.AtmosferaBaros(unidad));
+            resultado = parseDouble(principal.f.AtmosferaBaros(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LOS BAROS
         if("BAROS".equals(opcion) && "ATMOSFERAS".equals(opcion2)){
-            resultado = parseDouble(f.BarosAtmosfera(unidad));
+            resultado = parseDouble(principal.f.BarosAtmosfera(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("BAROS".equals(opcion) && "mmHG".equals(opcion2)){
-            resultado = parseDouble(f.BarosmmHG(unidad));
+            resultado = parseDouble(principal.f.BarosmmHG(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("BAROS".equals(opcion) && "PASCALES".equals(opcion2)){
-            resultado = parseDouble(f.BarosPascales(unidad));
+            resultado = parseDouble(principal.f.BarosPascales(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LOS PASCALES
         if("PASCALES".equals(opcion) && "BAROS".equals(opcion2)){
-            resultado = parseDouble(f.PascalesBaros(unidad));
+            resultado = parseDouble(principal.f.PascalesBaros(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PASCALES".equals(opcion) && "ATMOSFERAS".equals(opcion2)){
-            resultado = parseDouble(f.PascalesAtmosfera(unidad));
+            resultado = parseDouble(principal.f.PascalesAtmosfera(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PASCALES".equals(opcion) && "mmHG".equals(opcion2)){
-            resultado = parseDouble(f.PascalesmmHG(unidad));
+            resultado = parseDouble(principal.f.PascalesmmHG(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
     }//GEN-LAST:event_iniciarBTNActionPerformed

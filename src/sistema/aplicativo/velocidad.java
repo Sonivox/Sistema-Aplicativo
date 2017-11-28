@@ -165,6 +165,96 @@ public class velocidad extends javax.swing.JFrame {
         if(opcion == null ? opcion2 == null : opcion.equals(opcion2)){
             resultadoTXT.setText(unidadTXT.getText());
         }
+        
+        //PARA LOS KILOMETROS HORA
+        if("KILOMETROS HORA".equals(opcion) && "METROS SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilometro_hMetro_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS HORA".equals(opcion) && "MILLAS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilometro_hMilla_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS HORA".equals(opcion) && "NUDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilometro_hNudos(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("KILOMETROS HORA".equals(opcion) && "PIES SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilometro_hPie_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LOS METROS SEGUNDO
+        if("METROS SEGUNDO".equals(opcion) && "KILOMETROS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Metro_segundoKilometro_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS SEGUNDO".equals(opcion) && "MILLAS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Metro_segundoMilla_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS SEGUNDO".equals(opcion) && "NUDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Metro_segundoNudos(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("METROS SEGUNDO".equals(opcion) && "PIES SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.Metro_segundoPie_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LAS MILLAS
+        if("MILLAS HORA".equals(opcion) && "METROS SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.Milla_hMetro_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS HORA".equals(opcion) && "KILOMETROS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Milla_hKilometro_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS HORA".equals(opcion) && "NUDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Milla_hNudos(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MILLAS HORA".equals(opcion) && "PIES SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.Milla_hMetro_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LOS NUDOS 
+        if("NUDOS".equals(opcion) && "METROS SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.NudosMetro_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("NUDOS".equals(opcion) && "KILOMETROS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.NudosKilometro_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("NUDOS".equals(opcion) && "MILLAS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.NudosMilla_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("NUDOS".equals(opcion) && "PIES SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.NudosPie_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //PARA LOS PIES SEGUNDO
+        if("PIES SEGUNDO".equals(opcion) && "METROS SEGUNDO".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pie_segundoMetro_segundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES SEGUNDO".equals(opcion) && "KILOMETROS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pie_segundoKilometro_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES SEGUNDO".equals(opcion) && "MILLAS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pie_segundoMilla_h(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("PIES SEGUNDO".equals(opcion) && "NUDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pie_segundoNudos(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
     private void regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar1ActionPerformed

@@ -12,7 +12,6 @@ import static java.lang.Double.parseDouble;
  * @author Ronald
  */
 public class energia extends javax.swing.JFrame {
-    factory f = new factory();
     /**
      * Creates new form energia
      */
@@ -120,243 +119,135 @@ public class energia extends javax.swing.JFrame {
             resultadoTXT.setText(unidadTXT.getText());
         }
 
-        //PARA CENTIMETROS
-        if("CENTIMETROS CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.centiMetro(unidad));
+        //PARA VATIOS HORA
+        if("VATIOS HORA".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.vatio_hKilovartios_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("CENTIMETROS CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.centiKilo(unidad));
+        if("VATIOS HORA".equals(opcion) && "JULIOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.vatio_hJulio(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("CENTIMETROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.centiHecta(unidad));
+        if("VATIOS HORA".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.vatio_hKiolocalo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("CENTIMETROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.centiMilla(unidad));
+        if("VATIOS HORA".equals(opcion) && "KILOJOULES".equals(opcion2)){
+            resultado = parseDouble(principal.f.vatio_hKiJoule(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("CENTIMETROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.centiPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("CENTIMETROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.centiPul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("CENTIMETROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.centiYar(unidad));
+        if("VATIOS HORA".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
+            resultado = parseDouble(principal.f.centiPul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
 
-        //PARA METROS
-        if("METROS CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.metroCen(unidad));
+        //PARA KILOVATIOS HORA
+        if("KILOVATIOS HORA".equals(opcion) && "VATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilovatio_hvatio_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("METROS CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.metroKilo(unidad));
+        if("KILOVATIOS HORA".equals(opcion) && "JULIOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilovatio_hJulio(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("METROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.metroMilla(unidad));
+        if("KILOVATIOS HORA".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilovatio_hKilocalo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("METROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.metroHecta(unidad));
+        if("KILOVATIOS HORA".equals(opcion) && "KILOJOULES".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilovatio_hKiloJoule(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("METROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.metroPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("METROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.metroPul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("METROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.metroYar(unidad));
+        if("KILOVATIOS HORA".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Kilovatio_hPielibra_fuerza(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
 
-        //PARA LOS KILOMETROS
-        if("KILOMETROS CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.kiloCenti(unidad));
+        //PARA LOS JULIOS
+        if("JULIOS".equals(opcion) && "VATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.JulioVatio_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("KILOMETROS CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.kiloMetro(unidad));
+        if("JULIOS".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.JulioKilovatio_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("KILOMETROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloMilla(unidad));
+        if("JULIOS".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.JulioKilocalo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("KILOMETROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloHecta(unidad));
+        if("JULIOS".equals(opcion) && "KILOJOULES".equals(opcion2)){
+            resultado = parseDouble(principal.f.JulioKiJoule(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("KILOMETROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.kiloPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("KILOMETROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloPul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("KILOMETROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloYar(unidad));
+        if("JULIOS".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
+            resultado = parseDouble(principal.f.JulioPielibra_fuerza(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
 
-        //PARA LAS MILLAS
-        if("MILLAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaCen(unidad));
+        //PARA LAS KILOCALORIAS
+        if("KILOCALORIAS".equals(opcion) && "JULIOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiloCaloJulio(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("MILLAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaMet(unidad));
+        if("KILOCALORIAS".equals(opcion) && "VATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiloCalovatio_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("MILLAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaKilo(unidad));
+        if("KILOCALORIAS".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiloCaloKilovatio_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("MILLAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.millaHecta(unidad));
+        if("KILOCALORIAS".equals(opcion) && "KILOJOULES".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiloCaloKiloJoule(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("MILLAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("MILLAS CUADRADAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.millaPul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("MILLAS CUADRADAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.millaYar(unidad));
+        if("KILOCALORIAS".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiloCaloPielibra_fuerza(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
 
-        //PARA LAS HECTAREAS
-        if("HECTAREAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaCen(unidad));
+        //PARA KILOJOULES
+        if("KILOJOULES".equals(opcion) && "JULIOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiJouleJulio(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("HECTAREAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaMet(unidad));
+        if("KILOJOULES".equals(opcion) && "VATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiJouleVatio_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("HECTAREAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaKilo(unidad));
+        if("KILOJOULES".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiJouleKilovatios_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("HECTAREAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.hectaMilla(unidad));
+        if("KILOJOULES".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiJouleKilocalo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("HECTAREAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("HECTAREAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.hectaPul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("HECTAREAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.hectaYar(unidad));
+        if("KILOJOULES".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
+            resultado = parseDouble(principal.f.KiJoulePielibra_fuerza(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
 
-        //PARA LOS PIES
-        if("PIES CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pieCen(unidad));
+        //PARA LOS PIE-LIBRA-FUERZA
+        if("PIE-LIBRA-FUERZA".equals(opcion) && "JULIOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pielibra_fuerzaJulio(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("PIES CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pieMet(unidad));
+        if("PIE-LIBRA-FUERZA".equals(opcion) && "VATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pielibra_fuerzavatio_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("PIES CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pieKilo(unidad));
+        if("PIE-LIBRA-FUERZA".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pielibra_fuerzaKilovatios_h(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("PIES CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.pieMilla(unidad));
+        if("PIE-LIBRA-FUERZA".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pielibra_fuerzaKiloCalo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("PIES CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.pieHecta(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PIES CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.piePul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PIES CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.piePul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-
-        //PARA LAS PULGADAS
-        if("PULGADAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulCen(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PULGADAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulMet(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PULGADAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulKilo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PULGADAS CUADRADAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.pulMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PULGADAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.pulHecta(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PULGADAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("PULGADAS CUADRADAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.pulYar(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-
-        //PARA LAS YARDAS
-        if("YARDAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarCen(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("YARDAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarMet(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("YARDAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarKilo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("YARDAS CUADRADAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.yarMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("YARDAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.yarHecta(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("YARDAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
-        }
-        if("YARDAS CUADRADAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.yarPul(unidad));
+        if("PIE-LIBRA-FUERZA".equals(opcion) && "KILOJOULES".equals(opcion2)){
+            resultado = parseDouble(principal.f.Pielibra_fuerzaKiloJoule(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
 

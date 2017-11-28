@@ -13,8 +13,6 @@ import static java.lang.Double.parseDouble;
  */
 public class area extends javax.swing.JFrame {
     
-    factory f = new factory();
-    
     public area() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -129,241 +127,241 @@ public class area extends javax.swing.JFrame {
         
         //PARA CENTIMETROS
         if("CENTIMETROS CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.centiMetro(unidad));
+            resultado = parseDouble(principal.f.centiMetro(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("CENTIMETROS CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.centiKilo(unidad));
+            resultado = parseDouble(principal.f.centiKilo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("CENTIMETROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.centiHecta(unidad));
+            resultado = parseDouble(principal.f.centiHecta(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("CENTIMETROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.centiMilla(unidad));
+            resultado = parseDouble(principal.f.centiMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("CENTIMETROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.centiPie(unidad));
+            resultado = parseDouble(principal.f.centiPie(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("CENTIMETROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.centiPul(unidad));
+            resultado = parseDouble(principal.f.centiPul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("CENTIMETROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.centiYar(unidad));
+            resultado = parseDouble(principal.f.centiYar(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA METROS
         if("METROS CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.metroCen(unidad));
+            resultado = parseDouble(principal.f.metroCen(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("METROS CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.metroKilo(unidad));
+            resultado = parseDouble(principal.f.metroKilo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("METROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.metroMilla(unidad));
+            resultado = parseDouble(principal.f.metroMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("METROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.metroHecta(unidad));
+            resultado = parseDouble(principal.f.metroHecta(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("METROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.metroPie(unidad));
+            resultado = parseDouble(principal.f.metroPie(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
-        if("METROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.metroPul(unidad));
+        if("METROS CUADRADOS".equals(opcion) && "PULGADAprincipal.S CUADRADAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.metroPul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("METROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.metroYar(unidad));
+            resultado = parseDouble(principal.f.metroYar(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LOS KILOMETROS
         if("KILOMETROS CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.kiloCenti(unidad));
+            resultado = parseDouble(principal.f.kiloCenti(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("KILOMETROS CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.kiloMetro(unidad));
+            resultado = parseDouble(principal.f.kiloMetro(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("KILOMETROS CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloMilla(unidad));
+            resultado = parseDouble(principal.f.kiloMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("KILOMETROS CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloHecta(unidad));
+            resultado = parseDouble(principal.f.kiloHecta(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("KILOMETROS CUADRADOS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.kiloPie(unidad));
+            resultado = parseDouble(principal.f.kiloPie(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("KILOMETROS CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloPul(unidad));
+            resultado = parseDouble(principal.f.kiloPul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("KILOMETROS CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.kiloYar(unidad));
+            resultado = parseDouble(principal.f.kiloYar(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LAS MILLAS
         if("MILLAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaCen(unidad));
+            resultado = parseDouble(principal.f.millaCen(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("MILLAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaMet(unidad));
+            resultado = parseDouble(principal.f.millaMet(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("MILLAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaKilo(unidad));
+            resultado = parseDouble(principal.f.millaKilo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("MILLAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.millaHecta(unidad));
+            resultado = parseDouble(principal.f.millaHecta(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("MILLAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.millaPie(unidad));
+            resultado = parseDouble(principal.f.millaPie(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("MILLAS CUADRADAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.millaPul(unidad));
+            resultado = parseDouble(principal.f.millaPul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("MILLAS CUADRADAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.millaYar(unidad));
+            resultado = parseDouble(principal.f.millaYar(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LAS HECTAREAS
         if("HECTAREAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaCen(unidad));
+            resultado = parseDouble(principal.f.hectaCen(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("HECTAREAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaMet(unidad));
+            resultado = parseDouble(principal.f.hectaMet(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("HECTAREAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaKilo(unidad));
+            resultado = parseDouble(principal.f.hectaKilo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("HECTAREAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.hectaMilla(unidad));
+            resultado = parseDouble(principal.f.hectaMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("HECTAREAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.hectaPie(unidad));
+            resultado = parseDouble(principal.f.hectaPie(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("HECTAREAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.hectaPul(unidad));
+            resultado = parseDouble(principal.f.hectaPul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("HECTAREAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.hectaYar(unidad));
+            resultado = parseDouble(principal.f.hectaYar(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LOS PIES 
         if("PIES CUADRADOS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pieCen(unidad));
+            resultado = parseDouble(principal.f.pieCen(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PIES CUADRADOS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pieMet(unidad));
+            resultado = parseDouble(principal.f.pieMet(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PIES CUADRADOS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pieKilo(unidad));
+            resultado = parseDouble(principal.f.pieKilo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PIES CUADRADOS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.pieMilla(unidad));
+            resultado = parseDouble(principal.f.pieMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PIES CUADRADOS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.pieHecta(unidad));
+            resultado = parseDouble(principal.f.pieHecta(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PIES CUADRADOS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.piePul(unidad));
+            resultado = parseDouble(principal.f.piePul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PIES CUADRADOS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.piePul(unidad));
+            resultado = parseDouble(principal.f.piePul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LAS PULGADAS
         if("PULGADAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulCen(unidad));
+            resultado = parseDouble(principal.f.pulCen(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PULGADAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulMet(unidad));
+            resultado = parseDouble(principal.f.pulMet(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PULGADAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulKilo(unidad));
+            resultado = parseDouble(principal.f.pulKilo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PULGADAS CUADRADAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.pulMilla(unidad));
+            resultado = parseDouble(principal.f.pulMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PULGADAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.pulHecta(unidad));
+            resultado = parseDouble(principal.f.pulHecta(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PULGADAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.pulPie(unidad));
+            resultado = parseDouble(principal.f.pulPie(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("PULGADAS CUADRADAS".equals(opcion) && "YARDAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.pulYar(unidad));
+            resultado = parseDouble(principal.f.pulYar(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         
         //PARA LAS YARDAS
         if("YARDAS CUADRADAS".equals(opcion) && "CENTIMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarCen(unidad));
+            resultado = parseDouble(principal.f.yarCen(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("YARDAS CUADRADAS".equals(opcion) && "METROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarMet(unidad));
+            resultado = parseDouble(principal.f.yarMet(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("YARDAS CUADRADAS".equals(opcion) && "KILOMETROS CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarKilo(unidad));
+            resultado = parseDouble(principal.f.yarKilo(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("YARDAS CUADRADAS".equals(opcion) && "MILLAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.yarMilla(unidad));
+            resultado = parseDouble(principal.f.yarMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("YARDAS CUADRADAS".equals(opcion) && "HECTAREAS".equals(opcion2)){
-            resultado = parseDouble(f.yarHecta(unidad));
+            resultado = parseDouble(principal.f.yarHecta(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("YARDAS CUADRADAS".equals(opcion) && "PIES CUADRADOS".equals(opcion2)){
-            resultado = parseDouble(f.yarPie(unidad));
+            resultado = parseDouble(principal.f.yarPie(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("YARDAS CUADRADAS".equals(opcion) && "PULGADAS CUADRADAS".equals(opcion2)){
-            resultado = parseDouble(f.yarPul(unidad));
+            resultado = parseDouble(principal.f.yarPul(unidad));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         

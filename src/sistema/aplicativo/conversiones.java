@@ -2,10 +2,8 @@ package sistema.aplicativo;
 
 public class conversiones {
     
-    unidades u = new unidades();
     private double conversion;
     private String resultado;
-    double area;
     
     //PARA TODAS LAS UNIDADES DE AREA
     //PARA LOS CENTIMETROS CUADRADOS
@@ -356,7 +354,7 @@ public class conversiones {
         resultado = String.valueOf(conversion);
         return resultado;
     }
-    public String KiloJoulePielibra_fuerza(double energia){
+    public String KiJoulePielibra_fuerza(double energia){
         conversion= (energia*737.562);
         resultado = String.valueOf(conversion);
         return resultado;
@@ -423,7 +421,7 @@ public class conversiones {
         return resultado;
     }
     public String KiloCaloKiloJoule(double energia){
-        conversion= (u.getEnergia()/0.239006);
+        conversion= (energia/0.239006);
         resultado = String.valueOf(conversion);
         return resultado;
     }
@@ -719,7 +717,7 @@ public class conversiones {
         return resultado;
     }
     public String StoneOnza(double masa){
-        conversion = (u.getMasa()/0.004464429);
+        conversion = (masa/0.004464429);
         resultado= String.valueOf(conversion);
         return resultado;
     }
@@ -762,127 +760,232 @@ public class conversiones {
     
     //PARA LAS UNIDADES DE VELOCIDAD
     //PARA KILOMERTROS HORA
-    public void Kilometro_hMilla_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*0.621371);
+    public String Kilometro_hMilla_h(double velocidad){
+        conversion = (velocidad*0.621371);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Kilometro_hMetro_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*0.277778);
+    public String Kilometro_hMetro_segundo(double velocidad){
+        conversion = (velocidad*0.277778);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Kilometro_hNudos(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*0.539957);
+    public String Kilometro_hNudos(double velocidad){
+        conversion = (velocidad*0.539957);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Kilometro_hPie_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*0.911344);
+    public String Kilometro_hPie_segundo(double velocidad){
+        conversion = (velocidad*0.911344);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
+    
     //PARA MILLA HORA
-    public void Milla_hKilometro_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/0.621371);
+    public String Milla_hKilometro_h(double velocidad){
+        conversion = (velocidad/0.621371);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Milla_hMetro_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*0.44704);
+    public String Milla_hMetro_segundo(double velocidad){
+        conversion = (velocidad*0.44704);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Milla_hNudos(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*0.868976);
+    public String Milla_hNudos(double velocidad){
+        conversion = (velocidad*0.868976);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Milla_hPie_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*1.46667);
+    public String Milla_hPie_segundo(double velocidad){
+        conversion = (velocidad*1.46667);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
     //PARA METRO SEGUNDO
-    public void Metro_segundoKilometro_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/0.277778);
+    public String Metro_segundoKilometro_h(double velocidad){
+        conversion = (velocidad/0.277778);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Metro_segundoMilla_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/0.44704);
+    public String Metro_segundoMilla_h(double velocidad){
+        conversion = (velocidad/0.44704);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Metro_segundoNudos(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*1.94384);
+    public String Metro_segundoNudos(double velocidad){
+        conversion = (velocidad*1.94384);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void Metro_segundoPie_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*3.28084);
+    public String Metro_segundoPie_segundo(double velocidad){
+        conversion = (velocidad*3.28084);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
     //PARA NUDOS
-    public void NudosKilometro_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/0.539957);
+    public String NudosKilometro_h(double velocidad){
+        conversion = (velocidad/0.539957);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void NudosMilla_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/0.868976);
+    public String NudosMilla_h(double velocidad){
+        conversion = (velocidad/0.868976);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void NudosMetro_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/1.94384);
+    public String NudosMetro_segundo(double velocidad){
+        conversion = (velocidad/1.94384);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void NudosPie_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()*1.68781);
+    public String NudosPie_segundo(double velocidad){
+        conversion = (velocidad*1.68781);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
     //PARA PIE SEGUNDO
-    public void Pie_segundoKilometro_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/0.911344);
+    public String Pie_segundoKilometro_h(double velocidad){
+        conversion = (velocidad/0.911344);
+        resultado= String.valueOf(conversion);
+        return resultado;
+    }
+    public String Pie_segundoMilla_h(double velocidad){
+        conversion = (velocidad/1.46667);
+        resultado= String.valueOf(conversion);
+        return resultado;
+    }
+    public String Pie_segundoMetro_segundo(double velocidad){
+        conversion = (velocidad/3.28084);
+        resultado= String.valueOf(conversion);
+        return resultado;
+    }
+    public String Pie_segundoNudos(double velocidad){
+        conversion = (velocidad/1.68781);
+        resultado= String.valueOf(conversion);
+        return resultado;
+    }
+    
+    
+    //PARA LAS UNIDADES DE TIEMPO
+    //PARA SEGUNDAS
+     public void SegundoMinuto(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()/60);
         resultado= String.valueOf(conversion);
         System.out.println(resultado);
     }
-    public void Pie_segundoMilla_h(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/1.46667);
+    public void SegundosHora(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(1/3600));
         resultado= String.valueOf(conversion);
         System.out.println(resultado);
     }
-    public void Pie_segundoMetro_segundo(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/3.28084);
+    public void SegundoDia(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(1/(3600*24)));
         resultado= String.valueOf(conversion);
         System.out.println(resultado);
     }
-    public void Pie_segundoNudos(double velocidad){
-        u.setVelocidad(velocidad);
-        conversion = (u.getVelocidad()/1.68781);
+    public void SegundosSemana(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(1/(3600*168)));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void MinutosSegundos(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*60);
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void MinutosHora(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(1/60));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void MinutosDia(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(1/1440));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void MinutosSemana(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(1/(1440*7)));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void HoraSegundo(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*3600);
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+     public void HoraMinuto(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*60);
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void HoraDia(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()/24);
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void HoraSemana(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*((1/24)*(1/7)));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void DiaSegundo(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(24*60*60));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void DiaMinuto(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(24*60));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void DiaHora(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(24));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void DiaSemana(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()/7);
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void SemanaSegundo(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(604800));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void SemanaMinuto(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(10080));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void SemanaHora(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(7*24));
+        resultado= String.valueOf(conversion);
+        System.out.println(resultado);
+    }
+    public void SemanaDia(double tiempo){
+        u.setTiempo(tiempo);
+        conversion = (u.getTiempo()*(7));
         resultado= String.valueOf(conversion);
         System.out.println(resultado);
     }
