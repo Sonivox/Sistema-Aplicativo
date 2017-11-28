@@ -56,22 +56,6 @@ public class menu extends javax.swing.JFrame {
         });
         jPanel1.add(areaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 160, 40));
 
-<<<<<<< HEAD
-=======
-        fuerzaBTN.setBackground(new java.awt.Color(27, 90, 119));
-        fuerzaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
-        fuerzaBTN.setForeground(new java.awt.Color(255, 255, 255));
-        fuerzaBTN.setText("FUERZA");
-        fuerzaBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        fuerzaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fuerzaBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fuerzaBTNActionPerformed(evt);
-            }
-        });
-        jPanel1.add(fuerzaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 160, 45));
-
->>>>>>> 881fa75e94d901cc7d635d57d3f093e31bba0d4e
         energiaBTN.setBackground(new java.awt.Color(27, 90, 119));
         energiaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         energiaBTN.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,11 +80,7 @@ public class menu extends javax.swing.JFrame {
                 longitudBTNActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 160, 45));
-=======
-        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 160, 45));
->>>>>>> 881fa75e94d901cc7d635d57d3f093e31bba0d4e
+        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 160, 45));
 
         masaBTN.setBackground(new java.awt.Color(27, 90, 119));
         masaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -113,11 +93,7 @@ public class menu extends javax.swing.JFrame {
                 masaBTNActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 160, 45));
-=======
-        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 160, 45));
->>>>>>> 881fa75e94d901cc7d635d57d3f093e31bba0d4e
+        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 160, 45));
 
         presionBTN.setBackground(new java.awt.Color(27, 90, 119));
         presionBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -201,7 +177,7 @@ public class menu extends javax.swing.JFrame {
                 cerrarLBMouseClicked(evt);
             }
         });
-        jPanel1.add(cerrarLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 0, 30, -1));
+        jPanel1.add(cerrarLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, -1));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo3.jpg"))); // NOI18N
@@ -211,13 +187,11 @@ public class menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 592, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 592, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
