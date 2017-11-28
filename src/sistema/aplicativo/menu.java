@@ -67,7 +67,7 @@ public class menu extends javax.swing.JFrame {
                 energiaBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(energiaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 160, 45));
+        jPanel1.add(energiaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 160, 45));
 
         longitudBTN.setBackground(new java.awt.Color(27, 90, 119));
         longitudBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -80,7 +80,7 @@ public class menu extends javax.swing.JFrame {
                 longitudBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 160, 45));
+        jPanel1.add(longitudBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, 45));
 
         masaBTN.setBackground(new java.awt.Color(27, 90, 119));
         masaBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -93,7 +93,7 @@ public class menu extends javax.swing.JFrame {
                 masaBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 160, 45));
+        jPanel1.add(masaBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 160, 45));
 
         presionBTN.setBackground(new java.awt.Color(27, 90, 119));
         presionBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -106,7 +106,7 @@ public class menu extends javax.swing.JFrame {
                 presionBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(presionBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 160, 45));
+        jPanel1.add(presionBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 160, 45));
 
         tempeBTN.setBackground(new java.awt.Color(27, 90, 119));
         tempeBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -119,7 +119,7 @@ public class menu extends javax.swing.JFrame {
                 tempeBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(tempeBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 160, 45));
+        jPanel1.add(tempeBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 160, 45));
 
         tiempoBTN.setBackground(new java.awt.Color(27, 90, 119));
         tiempoBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -132,7 +132,7 @@ public class menu extends javax.swing.JFrame {
                 tiempoBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(tiempoBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 160, 45));
+        jPanel1.add(tiempoBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 160, 45));
 
         velocidadBTN.setBackground(new java.awt.Color(27, 90, 119));
         velocidadBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -145,7 +145,7 @@ public class menu extends javax.swing.JFrame {
                 velocidadBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(velocidadBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 160, 45));
+        jPanel1.add(velocidadBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 160, 45));
 
         volumenBTN.setBackground(new java.awt.Color(27, 90, 119));
         volumenBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
@@ -158,7 +158,7 @@ public class menu extends javax.swing.JFrame {
                 volumenBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(volumenBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 160, 45));
+        jPanel1.add(volumenBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 160, 45));
 
         jLabel2.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
