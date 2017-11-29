@@ -40,7 +40,7 @@ public class area extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         unidadTXT.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -56,38 +56,40 @@ public class area extends javax.swing.JFrame {
         jPanel1.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 105, 222, 40));
 
         jLabel2.setFont(new java.awt.Font("Cambria Math", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("=");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(259, 110, -1, -1));
 
         iniciarBTN.setBackground(new java.awt.Color(255, 255, 255));
-        iniciarBTN.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        iniciarBTN.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         iniciarBTN.setText("CONVERTIR");
-        iniciarBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        iniciarBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         iniciarBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iniciarBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iniciarBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 150, 69));
+        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 140, 40));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS CUADRADOS", "METROS CUADRADOS", "KILOMETROS CUADRADOS", "MILLAS CUADRADAS", "HECTAREAS", "PIES CUADRADOS", "PULGADAS CUADRADAS", "YARDAS CUADRADAS" }));
         segundaCB.setToolTipText("");
-        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 160, -1, 57));
+        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 160, -1, 50));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
         primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS CUADRADOS", "METROS CUADRADOS", "KILOMETROS CUADRADOS", "MILLAS CUADRADAS", "HECTAREAS", "PIES CUADRADOS", "PULGADAS CUADRADAS", "YARDAS CUADRADAS" }));
-        jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 160, 208, 48));
+        jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 160, 210, 48));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 65, -1, -1));
 
         regresar.setBackground(new java.awt.Color(255, 255, 255));
         regresar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         regresar.setText("MENU");
-        regresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        regresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,9 +106,7 @@ public class area extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
         );
 
         pack();

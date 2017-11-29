@@ -15,8 +15,7 @@ public class conversiones {
     public String centiKilo(double area){
         conversion = (0.0001 / 1000000) * area;
         resultado = String.valueOf(conversion);
-        return resultado;
-        
+        return resultado;   
     }
     public String centiMilla(double area){
         conversion = (area *  3.861e-11 )  ;
@@ -868,125 +867,521 @@ public class conversiones {
     
     
     //PARA LAS UNIDADES DE TIEMPO
-    //PARA SEGUNDAS
-     public void SegundoMinuto(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()/60);
+    //PARA SEGUNDOS
+     public String SegundosMinuto(double tiempo){
+        conversion = (tiempo/60);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void SegundosHora(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(1/3600));
+    public String SegundosHora(double tiempo){
+        conversion = (tiempo*(1/3600));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void SegundoDia(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(1/(3600*24)));
+    public String SegundosDia(double tiempo){
+        conversion = (tiempo*(1/(3600*24)));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void SegundosSemana(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(1/(3600*168)));
+    public  String SegundosSemana(double tiempo){
+        conversion = (tiempo*(1/(3600*168)));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void MinutosSegundos(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*60);
+    
+    //Minutos
+    public String MinutosSegundos(double tiempo){
+        conversion = (tiempo*60);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void MinutosHora(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(1/60));
+    public String MinutosHora(double tiempo){
+        conversion = (tiempo*(1/60));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void MinutosDia(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(1/1440));
+    public String MinutosDia(double tiempo){
+        conversion = (tiempo*(1/1440));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void MinutosSemana(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(1/(1440*7)));
+    public String MinutosSemana(double tiempo){
+        conversion = (tiempo*(1/(1440*7)));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void HoraSegundo(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*3600);
+    public String HoraSegundo(double tiempo){
+        conversion = (tiempo*3600);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-     public void HoraMinuto(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*60);
+     public String HoraMinuto(double tiempo){
+        conversion = (tiempo*60);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void HoraDia(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()/24);
+    public String HoraDia(double tiempo){
+        conversion = (tiempo/24);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+       return resultado;
     }
-    public void HoraSemana(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*((1/24)*(1/7)));
+    public String HoraSemana(double tiempo){
+        conversion = (tiempo*((1/24)*(1/7)));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void DiaSegundo(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(24*60*60));
+    public String DiaSegundo(double tiempo){
+        conversion = (tiempo*(24*60*60));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void DiaMinuto(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(24*60));
+    public String DiaMinuto(double tiempo){
+        conversion = (tiempo*(24*60));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void DiaHora(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(24));
+    public String DiaHora(double tiempo){
+        conversion = (tiempo*(24));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void DiaSemana(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()/7);
+    public String DiaSemana(double tiempo){
+        conversion = (tiempo/7);
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void SemanaSegundo(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(604800));
+    public String SemanaSegundo(double tiempo){
+        conversion = (tiempo*(604800));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void SemanaMinuto(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(10080));
+    public String SemanaMinuto(double tiempo){
+        conversion = (tiempo*(10080));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void SemanaHora(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(7*24));
+    public String SemanaHora(double tiempo){
+        conversion = (tiempo*(7*24));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
-    public void SemanaDia(double tiempo){
-        u.setTiempo(tiempo);
-        conversion = (u.getTiempo()*(7));
+    public String SemanaDia(double tiempo){
+        conversion = (tiempo*(7));
         resultado= String.valueOf(conversion);
-        System.out.println(resultado);
+        return resultado;
     }
+    
+    //LONGITUD
+    //Centimetro a otras unidads
+    public String CentiKilome(double longitud){
+        conversion= (longitud*0.00001);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String CentiMetro(double longitud){
+        conversion= (longitud*0.01);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String CentiMili(double longitud){
+        conversion= (longitud*10);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String CentiMilla(double longitud){
+        conversion= (longitud*0.0000062137);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String CentiMillanautica(double longitud){
+        conversion= (longitud*0.0000053996);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String CentiPies(double longitud){
+        conversion= (longitud*0.0328084);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String CentiPulgada(double longitud){
+        conversion= (longitud*0.393701);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String CentiYarda(double longitud){
+        conversion= (longitud*0.0109361);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Kilometro a otras unidades
+     public String KilomeCenti(double longitud){
+        conversion= (longitud/0.00001);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String KilomeMetro(double longitud){
+        conversion= (longitud*1000);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String KilomeMili(double longitud){
+        conversion= (longitud/0.000001);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String KilomeMilla(double longitud){
+        conversion= (longitud*0.621371);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String KilomeMillanautica(double longitud){
+        conversion= (longitud*0.539957);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String KilomePies(double longitud){
+        conversion= (longitud*3280.84);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String KilomePulgada(double longitud){
+        conversion= (longitud*39370.1);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String KilomeYarda(double longitud){
+        conversion= (longitud*1093.61);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Metros a otras unidades
+    public String MetroCenti(double longitud){
+        conversion= (longitud/0.01);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MetroKilome(double longitud){
+        conversion= (longitud*0.001);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MetroMili(double longitud){
+        conversion= (longitud*1000);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MetroMilla(double longitud){
+        conversion= (longitud*0.000621371);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MetroMillanautica(double longitud){
+        conversion= (longitud*0.000539957);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MetroPies(double longitud){
+        conversion= (longitud*3.28084);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MetroPulgada(double longitud){
+        conversion= (longitud*39.3701);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MetroYarda(double longitud){
+        conversion= (longitud*1.09361);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Milimetro a otras unidades
+    public String MiliCenti(double longitud){
+        conversion= (longitud/10);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MiliKilome(double longitud){
+        conversion= (longitud*0.000001);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MiliMetro(double longitud){
+        conversion= (longitud/0.001);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MiliMilla(double longitud){
+        conversion= (longitud*0.00000062137);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MiliMillanautica(double longitud){
+        conversion= (longitud*0.00000053996);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MiliPies(double longitud){
+        conversion= (longitud*0.00328084);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MiliPulgada(double longitud){
+        conversion= (longitud*0.00393701);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MiliYarda(double longitud){
+        conversion= (longitud*0.00109361);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Milla a otras unidades
+    public String MillaCenti(double longitud){
+        conversion= (longitud/0.0000062137);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillaKilome(double longitud){
+        conversion= (longitud/0.62137);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillaMetro(double longitud){
+        conversion= (longitud/0.000621371);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillaMili(double longitud){
+        conversion= (longitud/0.00000062137);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillaMillanautica(double longitud){
+        conversion= (longitud*0.868976);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillaPies(double longitud){
+        conversion= (longitud*5280);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillaPulgada(double longitud){
+        conversion= (longitud*63360);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillaYarda(double longitud){
+        conversion= (longitud*1760);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Milla nautica a otras
+    public String MillanauticaCenti(double longitud){
+        conversion= (longitud/0.00000539966);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillanauticaKilome(double longitud){
+        conversion= (longitud/0.539957);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillanauticaMetro(double longitud){
+        conversion= (longitud/0.000539957);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillanauticaMili(double longitud){
+        conversion= (longitud/0.00000053996);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillanauticaMilla(double longitud){
+        conversion= (longitud/0.868976);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillanauticaPie(double longitud){
+        conversion= (longitud*6076.12);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillanauticaPulgada(double longitud){
+        conversion= (longitud*72913.4);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String MillanauticaYarda(double longitud){
+        conversion= (longitud*2025.37);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Pies a otras
+    public String PiesCenti(double longitud){
+        conversion= (longitud/0.0328084);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PiesKilome(double longitud){
+        conversion= (longitud/3280.84);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PiesMetro(double longitud){
+        conversion= (longitud/3.28084);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PiesMili(double longitud){
+        conversion= (longitud/0.00328084);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PiesMilla(double longitud){
+        conversion= (longitud/5280);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PiesMillanautica(double longitud){
+        conversion= (longitud/6076.12);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PiesPulgada(double longitud){
+        conversion= (longitud*2025.37);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PiesYarda(double longitud){
+        conversion= (longitud*2025.37);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Pulgada a otras
+    public String PulgadaCenti(double longitud){
+        conversion= (longitud/0.393701);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PulgadaKilome(double longitud){
+        conversion= (longitud/39370.1);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PulgadaMetro(double longitud){
+        conversion= (longitud/39.3701);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PulgadaMili(double longitud){
+        conversion= (longitud/0.00393701);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PulgadaMilla(double longitud){
+        conversion= (longitud/633601);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PulgadaMillanautica(double longitud){
+        conversion= (longitud/72913.4);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PulgadaPie(double longitud){
+        conversion= (longitud/2025.37);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String PulgadaYarda(double longitud){
+        conversion= (longitud*0.277778);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Yarda a otras unidades
+    public String YardaCenti(double longitud){
+        conversion= (longitud/0.0109361);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String YardaKilome(double longitud){
+        conversion= (longitud/1093.61);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String YardaMetro(double longitud){
+        conversion= (longitud/1.09361);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String YardaMili(double longitud){
+        conversion= (longitud/0.00109361);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String YardaMilla(double longitud){
+        conversion= (longitud/1760);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String YardaMillanautica(double longitud){
+        conversion= (longitud/1760);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String YardaPies(double longitud){
+        conversion= (longitud/2025.37);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String YardaPulgada(double longitud){
+        conversion= (longitud/0.277778);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    //Temperatura
+    //Centigrado
+    public String CFaren(double temperatura){
+        conversion=((temperatura*1.8)+(32));
+        resultado=String.valueOf(conversion);
+        return resultado;
+    }
+    public String Ckelvin(double temperatura){
+        conversion=(temperatura+273.15);
+        resultado=String.valueOf(conversion);
+        return resultado;        
+    }
+    
+    //Kelvin
+    public String KCelcius(double temperatura){
+        conversion=(temperatura-273.15);
+        resultado=String.valueOf(conversion);
+        return resultado;        
+    }
+    public String KFaren(double temperatura){
+        conversion=(((temperatura-273.15)*(1.80))+32);
+        return resultado;
+    }
+    
+    //Fahrenheit
+    public String FCelcius(double temperatura){
+        conversion=((temperatura-32)/1.8);
+        return resultado;
+    }
+    public String FKelvin(double temperatura){
+        conversion=(((temperatura-32)/(1.80))+273.15);
+        return resultado;
+    }
+    
 }

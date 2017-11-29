@@ -8,7 +8,6 @@ package sistema.aplicativo;
 public class unidades {
     private double area;
     private double energia;
-    private double fuerza;
     private double longitud;
     private double masa;
     private double presion;
@@ -32,15 +31,7 @@ public class unidades {
     public double getEnergia(){
         return energia;
     }
-    
-    //PARA LA FUERZA
-    public void setFuerza(double fuerza){
-        this.fuerza = fuerza;
-    }
-    public double getFuerza(){
-        return fuerza;
-    }
-    
+
     //PARA LA LONGITUD
     public void setLongitud(double longitud){
         this.longitud = longitud;

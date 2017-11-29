@@ -32,7 +32,6 @@ public class masa extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         unidadTXT = new javax.swing.JTextField();
         resultadoTXT = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         iniciarBTN = new javax.swing.JButton();
         segundaCB = new javax.swing.JComboBox<>();
         primeraCB = new javax.swing.JComboBox<>();
@@ -42,50 +41,53 @@ public class masa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(52, 152, 219));
+        jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(unidadTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 158, 99, 32));
+        jPanel1.add(unidadTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 190, 40));
 
         resultadoTXT.setEditable(false);
-        jPanel1.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 158, 92, 32));
+        jPanel1.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 190, 40));
 
-        jLabel2.setText("RESULTADO");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 167, -1, -1));
-
+        iniciarBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         iniciarBTN.setText("Convertir");
+        iniciarBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         iniciarBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iniciarBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iniciarBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 118, -1, -1));
+        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 149, 40));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GRAMOS", "KILOGRAMOS", "LIBRAS", "MILIGRAMOS", "ONZAS", "STONE", "TONELADAS" }));
-        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 63, 197, 37));
+        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 190, 40));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
         primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GRAMOS", "KILOGRAMOS", "LIBRAS", "MILIGRAMOS", "ONZAS", "STONE", "TONELADAS" }));
-        jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 63, 189, 37));
+        jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 190, 40));
 
-        jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
-        jLabel3.setText("A:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 64, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("=");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 21, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
         regresar1.setBackground(new java.awt.Color(255, 255, 255));
-        regresar1.setText("Regresar");
+        regresar1.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        regresar1.setText("MENU ");
+        regresar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
         regresar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         regresar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresar1ActionPerformed(evt);
             }
         });
-        jPanel1.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 201, 101, -1));
+        jPanel1.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 100, 45));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,7 +97,7 @@ public class masa extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
         );
 
         pack();
@@ -271,6 +273,30 @@ public class masa extends javax.swing.JFrame {
         }
         
         //PARA LAS TONELADAS
+        if("TONELADA".equals(opcion) && "GRAMOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.ToneladaGramo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("TONELADA".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.ToneladaKilogra(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("TONELADA".equals(opcion) && "LIBRAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.ToneladaLibra(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("TONELADA".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.ToneladaMiligra(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("TONELADA".equals(opcion) && "ONZAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.StoneOnza(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("TONELDA".equals(opcion) && "STONE".equals(opcion2)){
+            resultado = parseDouble(principal.f.ToneladaStone(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
     private void regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar1ActionPerformed
@@ -316,7 +342,6 @@ public class masa extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> primeraCB;

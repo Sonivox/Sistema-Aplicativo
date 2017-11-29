@@ -5,6 +5,8 @@
  */
 package sistema.aplicativo;
 
+import static java.lang.Double.parseDouble;
+
 /**
  *
  * @author Ronald
@@ -29,9 +31,8 @@ public class tiempo extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        unidadTXT2 = new javax.swing.JTextField();
-        resultadoTXT2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        unidadTXT = new javax.swing.JTextField();
+        resultadoTXT = new javax.swing.JTextField();
         iniciarBTN2 = new javax.swing.JButton();
         segundaCB = new javax.swing.JComboBox<>();
         primeraCB = new javax.swing.JComboBox<>();
@@ -41,98 +42,51 @@ public class tiempo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel3.setBackground(new java.awt.Color(52, 152, 219));
+        jPanel3.setBackground(new java.awt.Color(0, 128, 128));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.add(unidadTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 190, 40));
 
-        resultadoTXT2.setEditable(false);
+        resultadoTXT.setEditable(false);
+        jPanel3.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 190, 40));
 
-        jLabel4.setText("RESULTADO");
-
-        iniciarBTN2.setText("Convertir");
+        iniciarBTN2.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        iniciarBTN2.setText("CONVERTIR");
+        iniciarBTN2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         iniciarBTN2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         iniciarBTN2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iniciarBTN2ActionPerformed(evt);
             }
         });
+        jPanel3.add(iniciarBTN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 140, 40));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        jPanel3.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 190, 40));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
+        jPanel3.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, 40));
 
-        jLabel5.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
-        jLabel5.setText("A:");
+        jLabel5.setFont(new java.awt.Font("Cambria Math", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("=");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
         regresar1.setBackground(new java.awt.Color(255, 255, 255));
-        regresar1.setText("Regresar");
+        regresar1.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        regresar1.setText("MENU");
+        regresar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black, java.awt.Color.black));
         regresar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         regresar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresar1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iniciarBTN2)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(primeraCB, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(unidadTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabel5))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(23, 23, 23)
-                                .addComponent(jLabel4)))))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(segundaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(resultadoTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addComponent(regresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primeraCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(segundaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addComponent(iniciarBTN2)
-                .addGap(17, 17, 17)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(unidadTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(resultadoTXT2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(regresar1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel3.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 100, 45));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,14 +96,114 @@ public class tiempo extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTN2ActionPerformed
-
+        //PARA LAS OPCIONES
+        String opcion = primeraCB.getSelectedItem().toString();
+        String opcion2 = segundaCB.getSelectedItem().toString();
+        
+        //PARA LOS CALCULOS
+        double unidad = parseDouble(unidadTXT.getText());
+        double resultado = 0;
+        
+        if(opcion == null ? opcion2 == null : opcion.equals(opcion2)){
+            resultadoTXT.setText(unidadTXT.getText());
+        }
+        
+        //Segundos
+        if("SEGUNDOS".equals(opcion) && "MINUTOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SegundosMinuto(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("SEGUNDOS".equals(opcion) && "HORAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SegundosHora(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("SEGUNDOS".equals(opcion) && "DIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SegundosDia(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("SEGUNDOS".equals(opcion) && "SEMANAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SegundosSemana(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //Minutos
+        if("MINUTOS".equals(opcion) && "SEGUNDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SegundosMinuto(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MINUTOS".equals(opcion) && "HORAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.MinutosHora(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MINUTOS".equals(opcion) && "DIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.MinutosDia(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("MINUTOS".equals(opcion) && "SEMANAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.MinutosSemana(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //Horas
+        if("HORAS".equals(opcion) && "SEGUNDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.HoraSegundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HORAS".equals(opcion) && "MINUTOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.HoraMinuto(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HORAS".equals(opcion) && "DIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.HoraDia(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("HORAS".equals(opcion) && "SEMANAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.HoraSemana(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //Dia
+        if("DIAS".equals(opcion) && "SEGUNDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.DiaSegundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("DIAS".equals(opcion) && "MINUTOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.DiaMinuto(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("DIAS".equals(opcion) && "HORAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.DiaHora(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("DIA".equals(opcion) && "SEMANAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.DiaSemana(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        
+        //Semana
+        if("SEMANA".equals(opcion) && "SEGUNDOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SemanaSegundo(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("SEMANA".equals(opcion) && "MINUTOS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SemanaMinuto(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("SEMANA".equals(opcion) && "HORAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SemanaHora(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
+        if("SEMANA".equals(opcion) && "DIAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.SemanaDia(unidad));
+            resultadoTXT.setText(String.valueOf(resultado));
+        }
     }//GEN-LAST:event_iniciarBTN2ActionPerformed
 
     private void regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar1ActionPerformed
@@ -195,13 +249,12 @@ public class tiempo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton iniciarBTN2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JComboBox<String> primeraCB;
     private javax.swing.JButton regresar1;
-    private javax.swing.JTextField resultadoTXT2;
+    private javax.swing.JTextField resultadoTXT;
     private javax.swing.JComboBox<String> segundaCB;
-    private javax.swing.JTextField unidadTXT2;
+    private javax.swing.JTextField unidadTXT;
     // End of variables declaration//GEN-END:variables
 }

@@ -41,31 +41,33 @@ public class energia extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(unidadTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 190, 50));
+        jPanel1.add(unidadTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 190, 40));
 
         resultadoTXT.setEditable(false);
-        jPanel1.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 197, 50));
+        jPanel1.add(resultadoTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 190, 40));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VATIOS HORA", "KILOVATIOS HORA", "JULIOS", "KILOCALORIAS", "KILOJOULES", "PIE-LIBRA-FUERZA" }));
-        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 197, 37));
+        jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 190, 37));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
         primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VATIOS HORA", "KILOVATIOS HORA", "JULIOS", "KILOCALORIAS", "KILOJOULES", "PIE-LIBRA-FUERZA" }));
         jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 189, 37));
 
         jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText(" =");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SELECIONE LAS UNIDADES QUE DESEA CONVERTIR");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
         regresar.setBackground(new java.awt.Color(255, 255, 255));
-        regresar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        regresar.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         regresar.setText("MENU");
         regresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -74,10 +76,10 @@ public class energia extends javax.swing.JFrame {
                 regresarActionPerformed(evt);
             }
         });
-        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 101, 47));
+        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 0, 100, 45));
 
         iniciarBTN.setBackground(new java.awt.Color(255, 255, 255));
-        iniciarBTN.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        iniciarBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         iniciarBTN.setText("CONVERTIR");
         iniciarBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         iniciarBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -86,7 +88,7 @@ public class energia extends javax.swing.JFrame {
                 iniciarBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 150, 69));
+        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 140, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,7 +98,7 @@ public class energia extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
         );
 
         pack();
