@@ -1,17 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistema.aplicativo;
 
 import static java.lang.Double.parseDouble;
-
-/**
- *
- * @author Ronald
- */
-public class tiempo extends javax.swing.JFrame {
+import javax.swing.JOptionPane;public class tiempo extends javax.swing.JFrame {
 
     /**
      * Creates new form tiempo
@@ -39,8 +29,10 @@ public class tiempo extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         regresar1 = new javax.swing.JButton();
+        factoresBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel3.setBackground(new java.awt.Color(0, 128, 128));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,6 +80,16 @@ public class tiempo extends javax.swing.JFrame {
         });
         jPanel3.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 100, 45));
 
+        factoresBTN.setFont(new java.awt.Font("Cambria Math", 2, 14)); // NOI18N
+        factoresBTN.setText("factores de conversion");
+        factoresBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        factoresBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factoresBTNActionPerformed(evt);
+            }
+        });
+        jPanel3.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,6 +106,7 @@ public class tiempo extends javax.swing.JFrame {
 
     private void iniciarBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTN2ActionPerformed
         //PARA LAS OPCIONES
+        try{
         String opcion = primeraCB.getSelectedItem().toString();
         String opcion2 = segundaCB.getSelectedItem().toString();
         
@@ -118,91 +121,95 @@ public class tiempo extends javax.swing.JFrame {
         //Segundos
         if("SEGUNDOS".equals(opcion) && "MINUTOS".equals(opcion2)){
             resultado = parseDouble(principal.f.SegundosMinuto(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("SEGUNDOS".equals(opcion) && "HORAS".equals(opcion2)){
             resultado = parseDouble(principal.f.SegundosHora(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("SEGUNDOS".equals(opcion) && "DIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.SegundosDia(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("SEGUNDOS".equals(opcion) && "SEMANAS".equals(opcion2)){
             resultado = parseDouble(principal.f.SegundosSemana(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Minutos
         if("MINUTOS".equals(opcion) && "SEGUNDOS".equals(opcion2)){
             resultado = parseDouble(principal.f.SegundosMinuto(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MINUTOS".equals(opcion) && "HORAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MinutosHora(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MINUTOS".equals(opcion) && "DIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MinutosDia(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MINUTOS".equals(opcion) && "SEMANAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MinutosSemana(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Horas
         if("HORAS".equals(opcion) && "SEGUNDOS".equals(opcion2)){
             resultado = parseDouble(principal.f.HoraSegundo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("HORAS".equals(opcion) && "MINUTOS".equals(opcion2)){
             resultado = parseDouble(principal.f.HoraMinuto(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("HORAS".equals(opcion) && "DIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.HoraDia(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("HORAS".equals(opcion) && "SEMANAS".equals(opcion2)){
             resultado = parseDouble(principal.f.HoraSemana(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Dia
         if("DIAS".equals(opcion) && "SEGUNDOS".equals(opcion2)){
             resultado = parseDouble(principal.f.DiaSegundo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("DIAS".equals(opcion) && "MINUTOS".equals(opcion2)){
             resultado = parseDouble(principal.f.DiaMinuto(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("DIAS".equals(opcion) && "HORAS".equals(opcion2)){
             resultado = parseDouble(principal.f.DiaHora(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("DIA".equals(opcion) && "SEMANAS".equals(opcion2)){
             resultado = parseDouble(principal.f.DiaSemana(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Semana
         if("SEMANA".equals(opcion) && "SEGUNDOS".equals(opcion2)){
             resultado = parseDouble(principal.f.SemanaSegundo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("SEMANA".equals(opcion) && "MINUTOS".equals(opcion2)){
             resultado = parseDouble(principal.f.SemanaMinuto(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("SEMANA".equals(opcion) && "HORAS".equals(opcion2)){
             resultado = parseDouble(principal.f.SemanaHora(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("SEMANA".equals(opcion) && "DIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.SemanaDia(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_iniciarBTN2ActionPerformed
 
@@ -210,6 +217,11 @@ public class tiempo extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_regresar1ActionPerformed
+
+    private void factoresBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTNActionPerformed
+        JOptionPane.showMessageDialog(null, " 1 min = 60 seg \n 1 hora = 60 min"
+                + "\n 1 dia = 24 horas \n 1 semana = 7 dias", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_factoresBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,6 +259,7 @@ public class tiempo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton factoresBTN;
     private javax.swing.JButton iniciarBTN2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;

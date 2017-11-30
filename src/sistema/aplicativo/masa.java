@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistema.aplicativo;
 
 import static java.lang.Double.parseDouble;
-
-/**
- *
- * @author Ronald
- */
+import javax.swing.JOptionPane;
 public class masa extends javax.swing.JFrame {
     /**
      * Creates new form masa
@@ -38,8 +29,10 @@ public class masa extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         regresar1 = new javax.swing.JButton();
+        factoresBTN2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -89,6 +82,16 @@ public class masa extends javax.swing.JFrame {
         });
         jPanel1.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 100, 45));
 
+        factoresBTN2.setFont(new java.awt.Font("Cambria Math", 2, 14)); // NOI18N
+        factoresBTN2.setText("factores de conversion");
+        factoresBTN2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        factoresBTN2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factoresBTN2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(factoresBTN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,6 +108,7 @@ public class masa extends javax.swing.JFrame {
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
         //PARA LAS OPCIONES
+        try{
         String opcion = primeraCB.getSelectedItem().toString();
         String opcion2 = segundaCB.getSelectedItem().toString();
         
@@ -119,183 +123,187 @@ public class masa extends javax.swing.JFrame {
         //PARA LOS GRAMOS
         if("GRAMOS".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.GramosKilogra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("GRAMOS".equals(opcion) && "LIBRA".equals(opcion2)){
+        if("GRAMOS".equals(opcion) && "LIBRAS".equals(opcion2)){
             resultado = parseDouble(principal.f.GramosLibra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("GRAMOS".equals(opcion) && "ONZAS".equals(opcion2)){
             resultado = parseDouble(principal.f.GramosOnza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("GRAMOS".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.GramosMiligra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("GRAMOS".equals(opcion) && "STONE".equals(opcion2)){
             resultado = parseDouble(principal.f.GramosStone(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("GRAMOS".equals(opcion) && "TONELADAS".equals(opcion2)){
             resultado = parseDouble(principal.f.GramosOnza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LOS KILOGRAMOS
         if("KILOGRAMOS".equals(opcion) && "GRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilograGramos(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOGRAMOS".equals(opcion) && "LIBRAS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilograLibra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOGRAMOS".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilograMiligramo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOGRAMOS".equals(opcion) && "ONZAS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilograOnza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOGRAMOS".equals(opcion) && "STONE".equals(opcion2)){
             resultado = parseDouble(principal.f.KilograStone(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOGRAMOS".equals(opcion) && "TONELADAS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilograTonelada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LAS LIBRAS  
         if("LIBRAS".equals(opcion) && "GRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.LibraGramos(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("LIBRA".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
+        if("LIBRAS".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.LibraKilogra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("LIBRA".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
+        if("LIBRAS".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.LibraMiligra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("LIBRA".equals(opcion) && "ONZAS".equals(opcion2)){
+        if("LIBRAS".equals(opcion) && "ONZAS".equals(opcion2)){
             resultado = parseDouble(principal.f.LibraOnza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("LIBRA".equals(opcion) && "STONE".equals(opcion2)){ 
+        if("LIBRAS".equals(opcion) && "STONE".equals(opcion2)){ 
             resultado = parseDouble(principal.f.LibraStone(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("LIBRA".equals(opcion) && "TONELADAS".equals(opcion2)){
+        if("LIBRAS".equals(opcion) && "TONELADAS".equals(opcion2)){
             resultado = parseDouble(principal.f.LibraTonelada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LOS MILIGRAMOS
         if("MILIGRAMOS".equals(opcion) && "GRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiligraGramo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIGRAMOS".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiligraKilogra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIGRAMOS".equals(opcion) && "LIBRAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiligraLibra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIGRAMOS".equals(opcion) && "ONZAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiligraOnza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIGRAMOS".equals(opcion) && "STONE".equals(opcion2)){
             resultado = parseDouble(principal.f.MiligraStone(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIGRAMOS".equals(opcion) && "TONELADAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiligraTonelada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LAS ONZAS
         if("ONZAS".equals(opcion) && "GRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.OnzaGramo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("ONZAS".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.OnzaKilogra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("ONZAS".equals(opcion) && "LIBRAS".equals(opcion2)){
             resultado = parseDouble(principal.f.OnzaLibra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("ONZAS".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.OnzaMiligra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("ONZAS".equals(opcion) && "STONE".equals(opcion2)){
             resultado = parseDouble(principal.f.OnzaStone(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("ONZAS".equals(opcion) && "TONELADAS".equals(opcion2)){
             resultado = parseDouble(principal.f.OnzaTonelada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LOS STONE
         if("STONE".equals(opcion) && "GRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneGramo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("STONE".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneKilogra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("STONE".equals(opcion) && "LIBRAS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneLibra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("STONE".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneMiligra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("STONE".equals(opcion) && "ONZAS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneOnza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("STONE".equals(opcion) && "TONELADAS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneTonelada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LAS TONELADAS
         if("TONELADA".equals(opcion) && "GRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaGramo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("TONELADA".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaKilogra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("TONELADA".equals(opcion) && "LIBRAS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaLibra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("TONELADA".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaMiligra(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("TONELADA".equals(opcion) && "ONZAS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneOnza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("TONELDA".equals(opcion) && "STONE".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaStone(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
@@ -303,6 +311,11 @@ public class masa extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_regresar1ActionPerformed
+
+    private void factoresBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTN2ActionPerformed
+        JOptionPane.showMessageDialog(null, "1 mg = 0.0001 g \n 1 kg = 1000 g \n 1 kg = 2.20462 lb"
+                + "\n 1 lb = 16 onzas \n 1 stone = 6.39029 kg \n 1 tonelada = 1000 kg", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_factoresBTN2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -340,6 +353,7 @@ public class masa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton factoresBTN2;
     private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

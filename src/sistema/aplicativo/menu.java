@@ -1,8 +1,4 @@
 package sistema.aplicativo;
-/**
- *
- * @author Roberto
- */
 public class menu extends javax.swing.JFrame {
     public menu() {
         
@@ -33,6 +29,8 @@ public class menu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         cerrarLB = new javax.swing.JLabel();
+        combustibleBTN = new javax.swing.JButton();
+        otroBTN = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -177,17 +175,45 @@ public class menu extends javax.swing.JFrame {
                 cerrarLBMouseClicked(evt);
             }
         });
-        jPanel1.add(cerrarLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, -1));
+        jPanel1.add(cerrarLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, 30, -1));
+
+        combustibleBTN.setBackground(new java.awt.Color(27, 90, 119));
+        combustibleBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        combustibleBTN.setForeground(new java.awt.Color(255, 255, 255));
+        combustibleBTN.setText("COMBUSTIBLE");
+        combustibleBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        combustibleBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        combustibleBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combustibleBTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(combustibleBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 160, 45));
+
+        otroBTN.setBackground(new java.awt.Color(27, 90, 119));
+        otroBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
+        otroBTN.setForeground(new java.awt.Color(255, 255, 255));
+        otroBTN.setText("OTRAS CONVERISIONES");
+        otroBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        otroBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        otroBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                otroBTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(otroBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 270, 45));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo3.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 460));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 592, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,6 +272,16 @@ public class menu extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_cerrarLBMouseClicked
 
+    private void combustibleBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combustibleBTNActionPerformed
+        combustible com = principal.f.combustible();
+        com.setVisible(true);
+    }//GEN-LAST:event_combustibleBTNActionPerformed
+
+    private void otroBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_otroBTNActionPerformed
+        otro o = principal.f.otro();
+        o.setVisible(true);
+    }//GEN-LAST:event_otroBTNActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -284,6 +320,7 @@ public class menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton areaBTN;
     private javax.swing.JLabel cerrarLB;
+    private javax.swing.JButton combustibleBTN;
     private javax.swing.JButton energiaBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -291,6 +328,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton longitudBTN;
     private javax.swing.JButton masaBTN;
+    private javax.swing.JButton otroBTN;
     private javax.swing.JButton presionBTN;
     private javax.swing.JButton tempeBTN;
     private javax.swing.JButton tiempoBTN;

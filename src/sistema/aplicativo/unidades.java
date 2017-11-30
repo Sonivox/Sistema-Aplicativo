@@ -1,10 +1,5 @@
 package sistema.aplicativo;
 
-/**
- *
- * @author Roberto
- */
-
 public class unidades {
     private double area;
     private double energia;

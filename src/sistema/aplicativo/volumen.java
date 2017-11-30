@@ -1,15 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistema.aplicativo;
 
-/**
- *
- * @author Ronald
- */
-public class volumen extends javax.swing.JFrame {
+import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
 
     /**
      * Creates new form volumen
@@ -37,8 +28,10 @@ public class volumen extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         regresar1 = new javax.swing.JButton();
+        factoresBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -86,6 +79,16 @@ public class volumen extends javax.swing.JFrame {
         });
         jPanel1.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 100, 45));
 
+        factoresBTN.setFont(new java.awt.Font("Cambria Math", 2, 14)); // NOI18N
+        factoresBTN.setText("factores de conversion");
+        factoresBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        factoresBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factoresBTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -101,13 +104,22 @@ public class volumen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
-
+        try{
+            
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
     private void regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar1ActionPerformed
       
         this.dispose();
     }//GEN-LAST:event_regresar1ActionPerformed
+
+    private void factoresBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTNActionPerformed
+        JOptionPane.showMessageDialog(null, "", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_factoresBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,6 +157,7 @@ public class volumen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton factoresBTN;
     private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

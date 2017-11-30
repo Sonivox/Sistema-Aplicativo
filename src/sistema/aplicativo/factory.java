@@ -35,4 +35,10 @@ public class factory extends conversiones{
     public volumen volumen(){
         return new volumen();
     }
+    public combustible combustible(){
+        return new combustible();
+    }
+    public otro otro(){
+        return new otro();
+    }
 }

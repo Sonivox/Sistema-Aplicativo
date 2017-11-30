@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistema.aplicativo;
 
 import static java.lang.Double.parseDouble;
-
-/**
- *
- * @author Ronald
- */
+import javax.swing.JOptionPane;
 public class longitud extends javax.swing.JFrame {
 
     /**
@@ -39,8 +30,10 @@ public class longitud extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         regresar1 = new javax.swing.JButton();
+        factoresBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -91,6 +84,16 @@ public class longitud extends javax.swing.JFrame {
         });
         jPanel1.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 0, 100, 45));
 
+        factoresBTN.setFont(new java.awt.Font("Cambria Math", 2, 14)); // NOI18N
+        factoresBTN.setText("factores de conversion");
+        factoresBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        factoresBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factoresBTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,6 +110,7 @@ public class longitud extends javax.swing.JFrame {
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
         //PARA LAS OPCIONES
+        try{
         String opcion = primeraCB.getSelectedItem().toString();
         String opcion2 = segundaCB.getSelectedItem().toString();
         
@@ -121,307 +125,311 @@ public class longitud extends javax.swing.JFrame {
         //Centimetro
         if("CENTIMETROS".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("CENTIMETROS".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("CENTIMETROS".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("CENTIMETROS".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("CENTIMETROS".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("CENTIMETROS".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiPies(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("CENTIMETROS".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiPulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("CENTIMETROS".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.CentiYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Kilometros
         if("KILOMETROS".equals(opcion) && "CENTIMETROS".equals(opcion2)){
-            resultado = parseDouble(principal.f.KilomeCenti(unidad));
+            resultado = parseDouble(principal.f.KilomeCenti(unidad).replaceAll("E", "*10^"));
             resultadoTXT.setText(String.valueOf(resultado));
         }
         if("KILOMETROS".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomeMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOMETROS".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomeMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOMETROS".equals(opcion) && "MILLA".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomeMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOMETROS".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomeMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOMETROS".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomePies(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOMETROS".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomePulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOMETROS".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomeYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Metro
         if("METROS".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroCenti(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("METROS".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("METROS".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("METROS".equals(opcion) && "MILLA".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("METROS".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("METROS".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroPies(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("METROS".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroPulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("METROS".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //MILIMETRO
         if("MILIMETROS".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliCenti(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIMETROS".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIMETROS".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIMETROS".equals(opcion) && "MILLA".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIMETROS".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIMETROS".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliPies(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIMETROS".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliPulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILIMETROS".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Milla
         if("MILLA".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaCenti(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaPies(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaPulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Milla nautica
         if("MILLA NAUTICA".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaCenti(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA NAUTICA".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA NAUTICA".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA NAUTICA".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA NAUTICA".equals(opcion) && "MILLA ".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA NAUTICA".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA NAUTICA".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaPulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("MILLA NAUTCIA".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Pulgada
         if("PIES".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesCenti(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIES".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIES".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIES".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIES".equals(opcion) && "MILLA".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIES".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIES".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesPulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIES".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Pulgada
         if("PULGADA".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaCenti(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PULGADA".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PULGADA".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PULGADA".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PULGADA".equals(opcion) && "MILLA".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PULGADA".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PULGADA".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaPie(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PULGADA".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaYarda(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //Yarda
         if("YARDA".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaCenti(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("YARDA".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaKilome(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("YARDA".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaMetro(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("YARDA".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaMili(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("YARDA".equals(opcion) && "MILLA".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaMilla(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("YARDA".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaMillanautica(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("YARDA".equals(opcion) && "PIE".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaPies(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("YARDA".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaPulgada(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_iniciarBTNActionPerformed
@@ -430,6 +438,14 @@ public class longitud extends javax.swing.JFrame {
       
         this.dispose();
     }//GEN-LAST:event_regresar1ActionPerformed
+
+    private void factoresBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTNActionPerformed
+        JOptionPane.showMessageDialog(null, "1 mm = 0.1 cm \n"
+                + " 1 m = 100 cm \n 1 km = 1000 m \n"
+                + " 1 km = 0.621371 milla \n 1 milla  = 0.868976 milla nautica \n"
+                + " 1 pie = 0.3048 m \n 1 pulgada = 0.0254 m \n"
+                + " 1 yarda = 0.9144 m", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_factoresBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -467,6 +483,7 @@ public class longitud extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton factoresBTN;
     private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

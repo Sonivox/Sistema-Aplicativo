@@ -5,6 +5,23 @@ public class conversiones {
     private double conversion;
     private String resultado;
     
+    public String consumo(double distancia, double gas){
+        conversion = (distancia / gas);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    public String costo(double gas, double dinero){
+        conversion = (gas * dinero);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
+    public String otro(double dato, double dato1){
+        conversion = (dato * dato1);
+        resultado = String.valueOf(conversion);
+        return resultado;
+    }
+    
     //PARA TODAS LAS UNIDADES DE AREA
     //PARA LOS CENTIMETROS CUADRADOS
     public String centiMetro(double area){
@@ -87,12 +104,12 @@ public class conversiones {
         return resultado;
     }
     public String kiloCenti(double area){
-        conversion = (area * 1000000);
+        conversion = (area * 1e+10);
         resultado = String.valueOf(conversion);
         return resultado;
     }
     public String kiloMilla(double area){
-        conversion = (area * 1000000);
+        conversion = (area * 0.386102);
         resultado = String.valueOf(conversion);
         return resultado;
     }

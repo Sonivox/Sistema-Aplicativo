@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistema.aplicativo;
 
 import static java.lang.Double.parseDouble;
-
-/**
- *
- * @author Ronald
- */
+import javax.swing.JOptionPane;
 public class energia extends javax.swing.JFrame {
     /**
      * Creates new form energia
@@ -38,8 +29,10 @@ public class energia extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         regresar = new javax.swing.JButton();
         iniciarBTN = new javax.swing.JButton();
+        factoresBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -90,6 +83,16 @@ public class energia extends javax.swing.JFrame {
         });
         jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 140, 40));
 
+        factoresBTN.setFont(new java.awt.Font("Cambria Math", 2, 14)); // NOI18N
+        factoresBTN.setText("factores de conversion");
+        factoresBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        factoresBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factoresBTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,6 +112,7 @@ public class energia extends javax.swing.JFrame {
     }//GEN-LAST:event_regresarActionPerformed
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
+        try{
         //PARA LAS OPCIONES
         String opcion = primeraCB.getSelectedItem().toString();
         String opcion2 = segundaCB.getSelectedItem().toString();
@@ -124,136 +128,146 @@ public class energia extends javax.swing.JFrame {
         //PARA VATIOS HORA
         if("VATIOS HORA".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.vatio_hKilovartios_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("VATIOS HORA".equals(opcion) && "JULIOS".equals(opcion2)){
             resultado = parseDouble(principal.f.vatio_hJulio(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("VATIOS HORA".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.vatio_hKiolocalo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("VATIOS HORA".equals(opcion) && "KILOJOULES".equals(opcion2)){
             resultado = parseDouble(principal.f.vatio_hKiJoule(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("VATIOS HORA".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
             resultado = parseDouble(principal.f.centiPul(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
 
         //PARA KILOVATIOS HORA
         if("KILOVATIOS HORA".equals(opcion) && "VATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.Kilovatio_hvatio_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOVATIOS HORA".equals(opcion) && "JULIOS".equals(opcion2)){
             resultado = parseDouble(principal.f.Kilovatio_hJulio(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOVATIOS HORA".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.Kilovatio_hKilocalo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOVATIOS HORA".equals(opcion) && "KILOJOULES".equals(opcion2)){
             resultado = parseDouble(principal.f.Kilovatio_hKiloJoule(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOVATIOS HORA".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
             resultado = parseDouble(principal.f.Kilovatio_hPielibra_fuerza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
 
         //PARA LOS JULIOS
         if("JULIOS".equals(opcion) && "VATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.JulioVatio_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("JULIOS".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.JulioKilovatio_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("JULIOS".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.JulioKilocalo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("JULIOS".equals(opcion) && "KILOJOULES".equals(opcion2)){
             resultado = parseDouble(principal.f.JulioKiJoule(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("JULIOS".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
             resultado = parseDouble(principal.f.JulioPielibra_fuerza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
 
         //PARA LAS KILOCALORIAS
         if("KILOCALORIAS".equals(opcion) && "JULIOS".equals(opcion2)){
             resultado = parseDouble(principal.f.KiloCaloJulio(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOCALORIAS".equals(opcion) && "VATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.KiloCalovatio_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOCALORIAS".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.KiloCaloKilovatio_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOCALORIAS".equals(opcion) && "KILOJOULES".equals(opcion2)){
             resultado = parseDouble(principal.f.KiloCaloKiloJoule(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOCALORIAS".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
             resultado = parseDouble(principal.f.KiloCaloPielibra_fuerza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
 
         //PARA KILOJOULES
         if("KILOJOULES".equals(opcion) && "JULIOS".equals(opcion2)){
             resultado = parseDouble(principal.f.KiJouleJulio(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOJOULES".equals(opcion) && "VATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.KiJouleVatio_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOJOULES".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.KiJouleKilovatios_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOJOULES".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.KiJouleKilocalo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("KILOJOULES".equals(opcion) && "PIE-LIBRA-FUERZA".equals(opcion2)){
             resultado = parseDouble(principal.f.KiJoulePielibra_fuerza(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
 
         //PARA LOS PIE-LIBRA-FUERZA
         if("PIE-LIBRA-FUERZA".equals(opcion) && "JULIOS".equals(opcion2)){
             resultado = parseDouble(principal.f.Pielibra_fuerzaJulio(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIE-LIBRA-FUERZA".equals(opcion) && "VATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.Pielibra_fuerzavatio_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIE-LIBRA-FUERZA".equals(opcion) && "KILOVATIOS HORA".equals(opcion2)){
             resultado = parseDouble(principal.f.Pielibra_fuerzaKilovatios_h(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIE-LIBRA-FUERZA".equals(opcion) && "KILOCALORIAS".equals(opcion2)){
             resultado = parseDouble(principal.f.Pielibra_fuerzaKiloCalo(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PIE-LIBRA-FUERZA".equals(opcion) && "KILOJOULES".equals(opcion2)){
             resultado = parseDouble(principal.f.Pielibra_fuerzaKiloJoule(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_iniciarBTNActionPerformed
+
+    private void factoresBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTNActionPerformed
+        JOptionPane.showMessageDialog(null, "1 Kilovatio hora = 1000 vatio hora \n 1 vatio hora = 3600 julio "
+                + "\n 1 julio = 0.000239006 Kilocaloria \n 1 Kilocaloria = 4.184 Kilojoule"
+                + "\n 1 Kilojoule = 737.562 Pies libras fuerza", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_factoresBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,6 +305,7 @@ public class energia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton factoresBTN;
     private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

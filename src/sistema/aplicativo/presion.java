@@ -1,17 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sistema.aplicativo;
 
 import static java.lang.Double.parseDouble;
-
-/**
- *
- * @author Ronald
- */
-public class presion extends javax.swing.JFrame {
+import javax.swing.JOptionPane;public class presion extends javax.swing.JFrame {
     /**
      * Creates new form presion
      */
@@ -38,8 +28,10 @@ public class presion extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         regresar1 = new javax.swing.JButton();
+        factoresBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 128, 128));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -89,6 +81,16 @@ public class presion extends javax.swing.JFrame {
         });
         jPanel1.add(regresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 100, 45));
 
+        factoresBTN.setFont(new java.awt.Font("Cambria Math", 2, 14)); // NOI18N
+        factoresBTN.setText("factores de conversion");
+        factoresBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        factoresBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factoresBTNActionPerformed(evt);
+            }
+        });
+        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,6 +107,7 @@ public class presion extends javax.swing.JFrame {
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
         //PARA LAS OPCIONES
+        try{
         String opcion = primeraCB.getSelectedItem().toString();
         String opcion2 = segundaCB.getSelectedItem().toString();
         
@@ -119,43 +122,61 @@ public class presion extends javax.swing.JFrame {
         //PARA LAS ATMOSFERA 
         if("ATMOSFERAS".equals(opcion) && "mmHG".equals(opcion2)){
             resultado = parseDouble(principal.f.AtmosferammHG(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("ATMOSFERAS".equals(opcion) && "PASCALES".equals(opcion2)){
             resultado = parseDouble(principal.f.AtmosferaPascales(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("ATMOSFERAS".equals(opcion) && "BAROS".equals(opcion2)){
             resultado = parseDouble(principal.f.AtmosferaBaros(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LOS BAROS
         if("BAROS".equals(opcion) && "ATMOSFERAS".equals(opcion2)){
             resultado = parseDouble(principal.f.BarosAtmosfera(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("BAROS".equals(opcion) && "mmHG".equals(opcion2)){
             resultado = parseDouble(principal.f.BarosmmHG(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("BAROS".equals(opcion) && "PASCALES".equals(opcion2)){
             resultado = parseDouble(principal.f.BarosPascales(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         
         //PARA LOS PASCALES
         if("PASCALES".equals(opcion) && "BAROS".equals(opcion2)){
             resultado = parseDouble(principal.f.PascalesBaros(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PASCALES".equals(opcion) && "ATMOSFERAS".equals(opcion2)){
             resultado = parseDouble(principal.f.PascalesAtmosfera(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
         if("PASCALES".equals(opcion) && "mmHG".equals(opcion2)){
             resultado = parseDouble(principal.f.PascalesmmHG(unidad));
-            resultadoTXT.setText(String.valueOf(resultado));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        
+        //PARA LOS mmHG
+        if("mmHG".equals(opcion) && "PASCALES".equals(opcion2)){
+            resultado = parseDouble(principal.f.mmHGPascales(unidad));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        if("mmHG".equals(opcion) && "ATMOSFERAS".equals(opcion2)){
+            resultado = parseDouble(principal.f.mmHGAtmosfera(unidad));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        if("mmHG".equals(opcion) && "BAROS".equals(opcion2)){
+            resultado = parseDouble(principal.f.mmHGBaros(unidad));
+            resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
+        }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
@@ -163,6 +184,11 @@ public class presion extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_regresar1ActionPerformed
+
+    private void factoresBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTNActionPerformed
+        JOptionPane.showMessageDialog(null, "1 atm = 760 mmHG \n 1 atm = 101325 pascales"
+                + "\n 1 pascal = 0.0005 baros", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_factoresBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,6 +226,7 @@ public class presion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton factoresBTN;
     private javax.swing.JButton iniciarBTN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
