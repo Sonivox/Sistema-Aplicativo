@@ -1,6 +1,8 @@
 package sistema.aplicativo;
 
+import java.awt.Image;
 import static java.lang.Double.parseDouble;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 public class energia extends javax.swing.JFrame {
     /**
@@ -9,6 +11,8 @@ public class energia extends javax.swing.JFrame {
     public energia() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Image icon = new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage();
+        setIconImage(icon);
     }
 
     /**

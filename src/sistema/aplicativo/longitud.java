@@ -1,6 +1,8 @@
 package sistema.aplicativo;
 
+import java.awt.Image;
 import static java.lang.Double.parseDouble;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 public class longitud extends javax.swing.JFrame {
 
@@ -10,6 +12,8 @@ public class longitud extends javax.swing.JFrame {
     public longitud() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Image icon = new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage();
+        setIconImage(icon);
     }
 
     /**
@@ -54,11 +58,11 @@ public class longitud extends javax.swing.JFrame {
         jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 140, 40));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
-        segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS", "KILOMETETROS", "METROS", "MILIMETROS", "MILLA", "MILLA NAUTICA", "PIES", "PULGADA", "YARDA" }));
+        segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS", "KILOMETROS", "METROS", "MILIMETROS", "MILLAS", "MILLA NAUTICA", "PIES", "PULGADA", "YARDA" }));
         jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 190, 37));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
-        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS", "KILOMETROS", "METROS", "MILIMETROS", "MILLA", "MILLA NAUTICA", "PIES", "PULGADA", "YARDA", " " }));
+        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CENTIMETROS", "KILOMETROS", "METROS", "MILIMETROS", "MILLAS", "MILLA NAUTICA", "PIES", "PULGADA", "YARDA" }));
         jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 190, 37));
 
         jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 36)); // NOI18N
@@ -169,7 +173,7 @@ public class longitud extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.KilomeMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("KILOMETROS".equals(opcion) && "MILLA".equals(opcion2)){
+        if("KILOMETROS".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.KilomeMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -203,7 +207,7 @@ public class longitud extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.MetroMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("METROS".equals(opcion) && "MILLA".equals(opcion2)){
+        if("METROS".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MetroMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -237,7 +241,7 @@ public class longitud extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.MiliMetro(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILIMETROS".equals(opcion) && "MILLA".equals(opcion2)){
+        if("MILIMETROS".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -259,35 +263,35 @@ public class longitud extends javax.swing.JFrame {
         }
         
         //Milla
-        if("MILLA".equals(opcion) && "CENTIMETROS".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "CENTIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaCenti(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA".equals(opcion) && "KILOMETROS".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "KILOMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaKilome(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA".equals(opcion) && "METROS".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "METROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaMetro(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA".equals(opcion) && "MILIMETROS".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "MILLA NAUTICA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaMillanautica(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA".equals(opcion) && "PIES".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "PIES".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaPies(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA".equals(opcion) && "PULGADA".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "PULGADA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaPulgada(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA".equals(opcion) && "YARDA".equals(opcion2)){
+        if("MILLAS".equals(opcion) && "YARDA".equals(opcion2)){
             resultado = parseDouble(principal.f.MillaYarda(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -309,7 +313,7 @@ public class longitud extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.MillanauticaMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILLA NAUTICA".equals(opcion) && "MILLA ".equals(opcion2)){
+        if("MILLA NAUTICA".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.MillanauticaMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -343,7 +347,7 @@ public class longitud extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.PiesMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("PIES".equals(opcion) && "MILLA".equals(opcion2)){
+        if("PIES".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.PiesMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -377,7 +381,7 @@ public class longitud extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.PulgadaMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("PULGADA".equals(opcion) && "MILLA".equals(opcion2)){
+        if("PULGADA".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.PulgadaMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -411,7 +415,7 @@ public class longitud extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.YardaMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("YARDA".equals(opcion) && "MILLA".equals(opcion2)){
+        if("YARDA".equals(opcion) && "MILLAS".equals(opcion2)){
             resultado = parseDouble(principal.f.YardaMilla(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }

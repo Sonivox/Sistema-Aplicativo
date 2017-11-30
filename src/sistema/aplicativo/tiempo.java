@@ -1,6 +1,8 @@
 package sistema.aplicativo;
 
+import java.awt.Image;
 import static java.lang.Double.parseDouble;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;public class tiempo extends javax.swing.JFrame {
 
     /**
@@ -9,6 +11,8 @@ import javax.swing.JOptionPane;public class tiempo extends javax.swing.JFrame {
     public tiempo() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Image icon = new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage();
+        setIconImage(icon);
     }
 
     /**
@@ -53,9 +57,11 @@ import javax.swing.JOptionPane;public class tiempo extends javax.swing.JFrame {
         jPanel3.add(iniciarBTN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 140, 40));
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
+        segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEGUNDOS", "MINUTOS", "HORAS", "DIAS", "SEMANAS" }));
         jPanel3.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 190, 40));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
+        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SEGUNDOS", "MINUTOS", "HORAS", "DIAS", "SEMANAS" }));
         jPanel3.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 190, 40));
 
         jLabel5.setFont(new java.awt.Font("Cambria Math", 1, 36)); // NOI18N
@@ -109,14 +115,20 @@ import javax.swing.JOptionPane;public class tiempo extends javax.swing.JFrame {
         try{
         String opcion = primeraCB.getSelectedItem().toString();
         String opcion2 = segundaCB.getSelectedItem().toString();
-        
         //PARA LOS CALCULOS
         double unidad = parseDouble(unidadTXT.getText());
         double resultado = 0;
         
-        if(opcion == null ? opcion2 == null : opcion.equals(opcion2)){
-            resultadoTXT.setText(unidadTXT.getText());
+        if(unidad < 0){
+            unidad = unidad * -1;
+        }else{
+            unidad = unidad;
         }
+        
+        if(opcion == null ? opcion2 == null : opcion.equals(opcion2)){
+            resultadoTXT.setText(String.valueOf(unidad));
+        }
+        
         
         //Segundos
         if("SEGUNDOS".equals(opcion) && "MINUTOS".equals(opcion2)){
@@ -209,18 +221,17 @@ import javax.swing.JOptionPane;public class tiempo extends javax.swing.JFrame {
         }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS ","ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_iniciarBTN2ActionPerformed
 
     private void regresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar1ActionPerformed
-        
         this.dispose();
     }//GEN-LAST:event_regresar1ActionPerformed
 
     private void factoresBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTNActionPerformed
         JOptionPane.showMessageDialog(null, " 1 min = 60 seg \n 1 hora = 60 min"
-                + "\n 1 dia = 24 horas \n 1 semana = 7 dias", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
+                + "\n 1 dia = 24 horas \n 1 semana = 7 dias \n no hay tiempo negativo", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_factoresBTNActionPerformed
 
     /**

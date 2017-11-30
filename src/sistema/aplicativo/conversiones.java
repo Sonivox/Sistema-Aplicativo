@@ -580,7 +580,7 @@ public class conversiones {
         return resultado;
     }
     public String GramosTonelada(double masa){
-        conversion = (masa*0.000001);
+        conversion = (masa * 0.000001);
         resultado= String.valueOf(conversion);
         return resultado;
     }
@@ -891,17 +891,17 @@ public class conversiones {
         return resultado;
     }
     public String SegundosHora(double tiempo){
-        conversion = (tiempo*(1/3600));
+        conversion = (tiempo*0.00027777);
         resultado= String.valueOf(conversion);
         return resultado;
     }
     public String SegundosDia(double tiempo){
-        conversion = (tiempo*(1/(3600*24)));
+        conversion = (tiempo*0.00001157);
         resultado= String.valueOf(conversion);
         return resultado;
     }
     public  String SegundosSemana(double tiempo){
-        conversion = (tiempo*(1/(3600*168)));
+        conversion = (tiempo*0.0000016);
         resultado= String.valueOf(conversion);
         return resultado;
     }
@@ -1033,7 +1033,7 @@ public class conversiones {
     
     //Kilometro a otras unidades
      public String KilomeCenti(double longitud){
-        conversion= (longitud/0.00001);
+        conversion= (longitud* 100000);
         resultado = String.valueOf(conversion);
         return resultado;
     }
