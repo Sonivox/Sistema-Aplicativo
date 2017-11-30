@@ -742,7 +742,7 @@ public class conversiones {
         resultado= String.valueOf(conversion);
         return resultado;
     }
-    //PARA LAS TONELADAS
+    //PARA LAS TONELADAS 
     public String ToneladaGramo(double masa){
         conversion = (masa * 1000000);
         resultado= String.valueOf(conversion);
