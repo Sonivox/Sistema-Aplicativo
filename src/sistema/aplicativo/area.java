@@ -371,7 +371,6 @@ public class area extends javax.swing.JFrame {
         catch(Exception e){
             JOptionPane.showMessageDialog(null," NO INGRESE LETRAS \n NO DEJE CAMPOS VACIOS","ERROR", JOptionPane.ERROR_MESSAGE);
         }
-        
     }//GEN-LAST:event_iniciarBTNActionPerformed
 
     private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed

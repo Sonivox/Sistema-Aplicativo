@@ -744,7 +744,7 @@ public class conversiones {
     }
     //PARA LAS TONELADAS
     public String ToneladaGramo(double masa){
-        conversion = (masa *0.00635029);
+        conversion = (masa * 1000000);
         resultado= String.valueOf(conversion);
         return resultado;
     }
@@ -1388,16 +1388,19 @@ public class conversiones {
     }
     public String KFaren(double temperatura){
         conversion=(((temperatura-273.15)*(1.80))+32);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     
     //Fahrenheit
     public String FCelcius(double temperatura){
         conversion=((temperatura-32)/1.8);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String FKelvin(double temperatura){
         conversion=(((temperatura-32)/(1.80))+273.15);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     
@@ -1405,130 +1408,160 @@ public class conversiones {
     //para litro
     public String LitroMili(double volumen){
         conversion=(volumen * 1000);
+        resultado = String.valueOf(conversion);
         return resultado;
     }
     public String LitroMcubico(double volumen){
         conversion=(volumen / 1000);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String LitroPcubico(double volumen){
         conversion=(volumen *0.0353147);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String LitroPulcubica(double volumen){
         conversion=(volumen *61.0237);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String LitroGusa(double volumen){
         conversion=(volumen *0.264172);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     //Para mililitro
     public String MiliLitro(double volumen){
         conversion=(volumen / 1000);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String MiliMcubico(double volumen){
         conversion=(volumen * 1e-6);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String MiliPcubico(double volumen){
         conversion=(volumen * 3.5315e-5);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String MiliPulcubica(double volumen){
         conversion=(volumen * 0.0610237);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String MiliGusa(double volumen){
         conversion=(volumen * 0.000264172);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     //metro cubico
     
     public String McubicoLitro(double volumen){
         conversion=(volumen * 1000);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String McubicoMili(double volumen){
         conversion=(volumen / 1e-6);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String McubicoPcubico(double volumen){
         conversion=(volumen * 35.3147);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String McubicoPulcubica(double volumen){
         conversion=(volumen * 61023.7);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String McubicoGusa(double volumen){
         conversion=(volumen * 264.172);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     
     //Para pie cubico
     public String PcubicoLitro(double volumen){
         conversion=(volumen /0.0353147);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String PcubicoMili(double volumen){
         conversion=(volumen / 3.5315e-5);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String PcubicoMcubico(double volumen){
         conversion=(volumen / 35.3147);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String PcubicoPulcubica(double volumen){
         conversion=(volumen *1728);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String PcubicoGusa(double volumen){
         conversion=(volumen *7.48052);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     //Para pulgada cubica
     public String PulcubicaLitro(double volumen){
         conversion=(volumen /61.0237);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String PulcubicaMili(double volumen){
         conversion=(volumen / 0.0610237);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
      public String PulcubicaMcubico(double volumen){
         conversion=(volumen / 61023.7);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String PulcubicaPcubico(double volumen){
         conversion=(volumen /1728);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String PulcubicaGusa(double volumen){
         conversion=(volumen *0.004329 );
+        resultado=String.valueOf(conversion);
         return resultado;
     }
      
     //Galon EE.UU
     public String GusaLitro(double volumen){
         conversion=(volumen /0.264172);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String GusaMili(double volumen){
         conversion=(volumen /0.000264172);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String GusaMcubico(double volumen){
         conversion=(volumen / 264.172);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String GusaPcubico(double volumen){
         conversion=(volumen /7.48052);
+        resultado=String.valueOf(conversion);
         return resultado;
     }
     public String GusaPulcubica(double volumen){
         conversion=(volumen /0.004329 );
+        resultado=String.valueOf(conversion);
         return resultado;
     }
 }

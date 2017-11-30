@@ -54,10 +54,15 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
 
         segundaCB.setFont(new java.awt.Font("Cambria Math", 1, 14)); // NOI18N
         segundaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LITROS", "MILIMETROS", "METRO CUBICO", "PIE CUBICO", "PULGADA CUBICA", "GALONES USA", " " }));
+        segundaCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                segundaCBActionPerformed(evt);
+            }
+        });
         jPanel1.add(segundaCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 190, 40));
 
         primeraCB.setFont(new java.awt.Font("Cambria Math", 0, 14)); // NOI18N
-        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LITRO", "MILIMETRO", "METRO CUBICO", "PIE CUBICO", "PULGADA CUBICA", "GALONES USA" }));
+        primeraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LITROS", "MILIMETROS", "METRO CUBICO", "PIE CUBICO", "PULGADA CUBICA", "GALONES USA" }));
         jPanel1.add(primeraCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 189, 37));
 
         jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 36)); // NOI18N
@@ -108,7 +113,7 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
 
     private void iniciarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarBTNActionPerformed
         try{
-            //PARA LAS OPCIONES
+        //PARA LAS OPCIONES
         String opcion = primeraCB.getSelectedItem().toString();
         String opcion2 = segundaCB.getSelectedItem().toString();
         
@@ -124,7 +129,7 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.LitroMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("LITROS".equals(opcion) && "METROS CUBICOS".equals(opcion2)){
+        if("LITROS".equals(opcion) && "METRO CUBICO".equals(opcion2)){
             resultado = parseDouble(principal.f.LitroMcubico(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -145,7 +150,7 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.MiliLitro(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("MILIMETROS".equals(opcion) && "METROS CUBICOS".equals(opcion2)){
+        if("MILIMETROS".equals(opcion) && "METRO CUBICO".equals(opcion2)){
             resultado = parseDouble(principal.f.MiliMcubico(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -163,23 +168,23 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
         }
         
         //para METRO CUBICO
-        if("METROS CUBICOS".equals(opcion) && "LITROS".equals(opcion2)){
+        if("METRO CUBICO".equals(opcion) && "LITROS".equals(opcion2)){
             resultado = parseDouble(principal.f.McubicoLitro(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("METROS CUBICOS".equals(opcion) && "MILIMETROS".equals(opcion2)){
+        if("METRO CUBICO".equals(opcion) && "MILIMETROS".equals(opcion2)){
             resultado = parseDouble(principal.f.McubicoMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("METROS CUBICOS".equals(opcion) && "PIE CUBICO".equals(opcion2)){
+        if("METRO CUBICO".equals(opcion) && "PIE CUBICO".equals(opcion2)){
             resultado = parseDouble(principal.f.McubicoPcubico(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("METROS CUBICOS".equals(opcion) && "PULGADA CUBICA".equals(opcion2)){
+        if("METRO CUBICO".equals(opcion) && "PULGADA CUBICA".equals(opcion2)){
             resultado = parseDouble(principal.f.McubicoPulcubica(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("METROS CUBICOS".equals(opcion) && "GALONES USA".equals(opcion2)){
+        if("METRO CUBICO".equals(opcion) && "GALONES USA".equals(opcion2)){
             resultado = parseDouble(principal.f.McubicoGusa(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -193,7 +198,7 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.PcubicoMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("PIE CUBICO".equals(opcion) && "METROS CUBICOS".equals(opcion2)){
+        if("PIE CUBICO".equals(opcion) && "METRO CUBICO".equals(opcion2)){
             resultado = parseDouble(principal.f.PcubicoMcubico(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -215,7 +220,7 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.PulcubicaMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("PULGADA CUBICA".equals(opcion) && "METROS CUBICOS".equals(opcion2)){
+        if("PULGADA CUBICA".equals(opcion) && "METRO CUBICO".equals(opcion2)){
             resultado = parseDouble(principal.f.PulcubicaMcubico(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -223,7 +228,7 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.PulcubicaPcubico(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("".equals(opcion) && "GALONES USA".equals(opcion2)){
+        if("PULGADA CUBICA".equals(opcion) && "GALONES USA".equals(opcion2)){
             resultado = parseDouble(principal.f.PulcubicaGusa(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -237,7 +242,7 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
             resultado = parseDouble(principal.f.GusaMili(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("GALONES USA".equals(opcion) && "METROS CUBICOS".equals(opcion2)){
+        if("GALONES USA".equals(opcion) && "METRO CUBICO".equals(opcion2)){
             resultado = parseDouble(principal.f.GusaMcubico(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
@@ -263,6 +268,10 @@ import javax.swing.JOptionPane;public class volumen extends javax.swing.JFrame {
     private void factoresBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factoresBTNActionPerformed
         JOptionPane.showMessageDialog(null, "", "FACTORES", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_factoresBTNActionPerformed
+
+    private void segundaCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segundaCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_segundaCBActionPerformed
 
     /**
      * @param args the command line arguments

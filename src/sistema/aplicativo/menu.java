@@ -47,6 +47,7 @@ public class menu extends javax.swing.JFrame {
         areaBTN.setText("AREA");
         areaBTN.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         areaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        areaBTN.setFocusPainted(false);
         areaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 areaBTNActionPerformed(evt);
@@ -60,6 +61,7 @@ public class menu extends javax.swing.JFrame {
         energiaBTN.setText("ENERGIA");
         energiaBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         energiaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        energiaBTN.setFocusPainted(false);
         energiaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 energiaBTNActionPerformed(evt);
@@ -73,6 +75,7 @@ public class menu extends javax.swing.JFrame {
         longitudBTN.setText("LONGITUD");
         longitudBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         longitudBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        longitudBTN.setFocusPainted(false);
         longitudBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 longitudBTNActionPerformed(evt);
@@ -86,6 +89,7 @@ public class menu extends javax.swing.JFrame {
         masaBTN.setText("MASA");
         masaBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         masaBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        masaBTN.setFocusPainted(false);
         masaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 masaBTNActionPerformed(evt);
@@ -99,6 +103,7 @@ public class menu extends javax.swing.JFrame {
         presionBTN.setText("PRESION");
         presionBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         presionBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        presionBTN.setFocusPainted(false);
         presionBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 presionBTNActionPerformed(evt);
@@ -112,6 +117,7 @@ public class menu extends javax.swing.JFrame {
         tempeBTN.setText("TEMPERATURA");
         tempeBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         tempeBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tempeBTN.setFocusPainted(false);
         tempeBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tempeBTNActionPerformed(evt);
@@ -125,6 +131,7 @@ public class menu extends javax.swing.JFrame {
         tiempoBTN.setText("TIEMPO");
         tiempoBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         tiempoBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tiempoBTN.setFocusPainted(false);
         tiempoBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tiempoBTNActionPerformed(evt);
@@ -138,6 +145,7 @@ public class menu extends javax.swing.JFrame {
         velocidadBTN.setText("VELOCIDAD");
         velocidadBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         velocidadBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        velocidadBTN.setFocusPainted(false);
         velocidadBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 velocidadBTNActionPerformed(evt);
@@ -151,6 +159,7 @@ public class menu extends javax.swing.JFrame {
         volumenBTN.setText("VOLUMEN");
         volumenBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         volumenBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        volumenBTN.setFocusPainted(false);
         volumenBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volumenBTNActionPerformed(evt);
@@ -183,6 +192,7 @@ public class menu extends javax.swing.JFrame {
         combustibleBTN.setText("COMBUSTIBLE");
         combustibleBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         combustibleBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        combustibleBTN.setFocusPainted(false);
         combustibleBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combustibleBTNActionPerformed(evt);
@@ -196,6 +206,7 @@ public class menu extends javax.swing.JFrame {
         otroBTN.setText("OTRAS CONVERISIONES");
         otroBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
         otroBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        otroBTN.setFocusPainted(false);
         otroBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 otroBTNActionPerformed(evt);

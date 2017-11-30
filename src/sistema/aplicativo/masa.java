@@ -277,27 +277,27 @@ public class masa extends javax.swing.JFrame {
         }
         
         //PARA LAS TONELADAS
-        if("TONELADA".equals(opcion) && "GRAMOS".equals(opcion2)){
+        if("TONELADAS".equals(opcion) && "GRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaGramo(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("TONELADA".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
+        if("TONELADAS".equals(opcion) && "KILOGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaKilogra(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("TONELADA".equals(opcion) && "LIBRAS".equals(opcion2)){
+        if("TONELADAS".equals(opcion) && "LIBRAS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaLibra(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("TONELADA".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
+        if("TONELADAS".equals(opcion) && "MILIGRAMOS".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaMiligra(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("TONELADA".equals(opcion) && "ONZAS".equals(opcion2)){
+        if("TONELADAS".equals(opcion) && "ONZAS".equals(opcion2)){
             resultado = parseDouble(principal.f.StoneOnza(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }
-        if("TONELDA".equals(opcion) && "STONE".equals(opcion2)){
+        if("TONELDAS".equals(opcion) && "STONE".equals(opcion2)){
             resultado = parseDouble(principal.f.ToneladaStone(unidad));
             resultadoTXT.setText(String.valueOf(resultado).replaceAll("E", "*10^"));
         }

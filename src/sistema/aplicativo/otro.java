@@ -81,7 +81,7 @@ public class otro extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("NOMBRE DE LA CONEVERSION");
+        jLabel1.setText("NOMBRE DE LA CONVERSION");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         nombreTXT.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
