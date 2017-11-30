@@ -56,7 +56,7 @@ public class otro extends javax.swing.JFrame {
                 regresarActionPerformed(evt);
             }
         });
-        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, 101, 47));
+        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 0, 101, 47));
 
         iniciarBTN.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         iniciarBTN.setText("CONVERTIR");
@@ -77,7 +77,7 @@ public class otro extends javax.swing.JFrame {
                 factoresBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, 110, 30));
+        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(524, 365, 110, 30));
 
         jLabel1.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,7 +139,7 @@ public class otro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

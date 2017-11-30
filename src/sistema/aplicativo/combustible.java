@@ -59,7 +59,7 @@ public class combustible extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("RESULTADO =");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 180, 50));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 180, 50));
 
         gasolinaTXT.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         jPanel1.add(gasolinaTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 150, 40));
@@ -72,7 +72,7 @@ public class combustible extends javax.swing.JFrame {
                 factoresBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 110, 30));
+        jPanel1.add(factoresBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 320, 110, 30));
 
         regresar.setBackground(new java.awt.Color(255, 255, 255));
         regresar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -84,7 +84,7 @@ public class combustible extends javax.swing.JFrame {
                 regresarActionPerformed(evt);
             }
         });
-        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 101, 47));
+        jPanel1.add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 0, 101, 47));
 
         dineroTXT.setFont(new java.awt.Font("Cambria Math", 0, 18)); // NOI18N
         jPanel1.add(dineroTXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 150, 40));
@@ -104,7 +104,7 @@ public class combustible extends javax.swing.JFrame {
                 iniciarBTNActionPerformed(evt);
             }
         });
-        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 110, 40));
+        jPanel1.add(iniciarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 150, 110, 40));
 
         jLabel5.setFont(new java.awt.Font("Cambria Math", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,7 +115,7 @@ public class combustible extends javax.swing.JFrame {
         resultadoTXT.setFont(new java.awt.Font("Cambria Math", 0, 12)); // NOI18N
         jScrollPane1.setViewportView(resultadoTXT);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 210, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 150, 110));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

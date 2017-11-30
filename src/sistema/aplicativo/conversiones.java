@@ -1401,4 +1401,134 @@ public class conversiones {
         return resultado;
     }
     
+    //Volumen
+    //para litro
+    public String LitroMili(double volumen){
+        conversion=(volumen * 1000);
+        return resultado;
+    }
+    public String LitroMcubico(double volumen){
+        conversion=(volumen / 1000);
+        return resultado;
+    }
+    public String LitroPcubico(double volumen){
+        conversion=(volumen *0.0353147);
+        return resultado;
+    }
+    public String LitroPulcubica(double volumen){
+        conversion=(volumen *61.0237);
+        return resultado;
+    }
+    public String LitroGusa(double volumen){
+        conversion=(volumen *0.264172);
+        return resultado;
+    }
+    //Para mililitro
+    public String MiliLitro(double volumen){
+        conversion=(volumen / 1000);
+        return resultado;
+    }
+    public String MiliMcubico(double volumen){
+        conversion=(volumen * 1e-6);
+        return resultado;
+    }
+    public String MiliPcubico(double volumen){
+        conversion=(volumen * 3.5315e-5);
+        return resultado;
+    }
+    public String MiliPulcubica(double volumen){
+        conversion=(volumen * 0.0610237);
+        return resultado;
+    }
+    public String MiliGusa(double volumen){
+        conversion=(volumen * 0.000264172);
+        return resultado;
+    }
+    //metro cubico
+    
+    public String McubicoLitro(double volumen){
+        conversion=(volumen * 1000);
+        return resultado;
+    }
+    public String McubicoMili(double volumen){
+        conversion=(volumen / 1e-6);
+        return resultado;
+    }
+    public String McubicoPcubico(double volumen){
+        conversion=(volumen * 35.3147);
+        return resultado;
+    }
+    public String McubicoPulcubica(double volumen){
+        conversion=(volumen * 61023.7);
+        return resultado;
+    }
+    public String McubicoGusa(double volumen){
+        conversion=(volumen * 264.172);
+        return resultado;
+    }
+    
+    //Para pie cubico
+    public String PcubicoLitro(double volumen){
+        conversion=(volumen /0.0353147);
+        return resultado;
+    }
+    public String PcubicoMili(double volumen){
+        conversion=(volumen / 3.5315e-5);
+        return resultado;
+    }
+    public String PcubicoMcubico(double volumen){
+        conversion=(volumen / 35.3147);
+        return resultado;
+    }
+    public String PcubicoPulcubica(double volumen){
+        conversion=(volumen *1728);
+        return resultado;
+    }
+    public String PcubicoGusa(double volumen){
+        conversion=(volumen *7.48052);
+        return resultado;
+    }
+    //Para pulgada cubica
+    public String PulcubicaLitro(double volumen){
+        conversion=(volumen /61.0237);
+        return resultado;
+    }
+    public String PulcubicaMili(double volumen){
+        conversion=(volumen / 0.0610237);
+        return resultado;
+    }
+     public String PulcubicaMcubico(double volumen){
+        conversion=(volumen / 61023.7);
+        return resultado;
+    }
+    public String PulcubicaPcubico(double volumen){
+        conversion=(volumen /1728);
+        return resultado;
+    }
+    public String PulcubicaGusa(double volumen){
+        conversion=(volumen *0.004329 );
+        return resultado;
+    }
+     
+    //Galon EE.UU
+    public String GusaLitro(double volumen){
+        conversion=(volumen /0.264172);
+        return resultado;
+    }
+    public String GusaMili(double volumen){
+        conversion=(volumen /0.000264172);
+        return resultado;
+    }
+    public String GusaMcubico(double volumen){
+        conversion=(volumen / 264.172);
+        return resultado;
+    }
+    public String GusaPcubico(double volumen){
+        conversion=(volumen /7.48052);
+        return resultado;
+    }
+    public String GusaPulcubica(double volumen){
+        conversion=(volumen /0.004329 );
+        return resultado;
+    }
 }
